@@ -9,6 +9,12 @@
   padding: 3rem;
 }
 
+@media screen and (max-width: 320px) {
+  #testimonialSection {
+    padding: 5rem 0.5rem;
+  }
+}
+
 #testimonialSection h2 {
   text-align: center;
   font-size: 2.5rem;
@@ -18,6 +24,12 @@
 
 #testimonialSection h2 strong {
   color: #bdff00;
+}
+
+@media screen and (max-width: 320px) {
+  #testimonialSection h2 {
+    font-size: 1.5rem;
+  }
 }
 
 #testimonialSection .testimonials {
@@ -69,5 +81,25 @@
 
 #testimonialSection .testimonials .testimonialItem .credit .relation {
   font-weight: 300;
+}
+
+@media screen and (max-width: 320px) {
+  #testimonialSection .testimonials .testimonialItem {
+    width: unset;
+    margin: 0 0.25rem;
+  }
+  #testimonialSection .testimonials .testimonialItem .profileImg {
+    width: 4rem;
+  }
+  #testimonialSection .testimonials .testimonialItem .body {
+    width: 100%;
+    font-size: 0.8rem;
+  }
+  #testimonialSection .testimonials .testimonialItem .credit .by {
+    font-size: 0.85rem;
+  }
+  #testimonialSection .testimonials .testimonialItem .credit .relation {
+    font-size: 0.85rem;
+  }
 }
 /*# sourceMappingURL=testimonial.css.map */

@@ -1,4 +1,5 @@
 import React from "react";
+import { GoThreeBars } from "react-icons/go";
 import "../../style/header/header.css";
 
 const Header = () => {
@@ -12,6 +13,7 @@ const Header = () => {
                 <li>Contact</li>
                 <li className="hire-me">Hire Me</li>
             </ul>
+            <GoThreeBars className="option-button" />
         </header>
     );
 };

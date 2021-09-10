@@ -49,6 +49,12 @@
   }
 }
 
+@media screen and (max-width: 320px) {
+  #homeSection .intro_text .name {
+    font-size: 3.5rem;
+  }
+}
+
 #homeSection .intro_text .work {
   font-weight: 500;
   font-size: 1.5rem;
@@ -58,6 +64,13 @@
   #homeSection .intro_text .work {
     font-size: 1rem;
     font-weight: 300;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #homeSection .intro_text .work {
+    font-weight: 300;
+    font-size: 0.8rem;
   }
 }
 
@@ -71,7 +84,20 @@
   gap: 1rem;
 }
 
+@media screen and (max-width: 320px) {
+  #homeSection .intro_text .buttons .button {
+    font-size: 0.5rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
 #homeSection .introImg {
   width: 50%;
+}
+
+@media screen and (max-width: 320px) {
+  #homeSection .introImg {
+    display: none;
+  }
 }
 /*# sourceMappingURL=home.css.map */

@@ -1,81 +1,114 @@
 header {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    padding: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3rem;
 }
 
 @media screen and (max-width: 768px) and (min-width: 321px) {
-    header {
-        padding: 2rem;
-    }
+  header {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  header {
+    padding: 1rem 1rem;
+  }
+}
+
+header .option-button {
+  display: none;
+  cursor: pointer;
+  color: #bdff00;
+  width: 2rem;
+  height: 2rem;
+}
+
+@media screen and (max-width: 320px) {
+  header .option-button {
+    display: block;
+  }
 }
 
 header h1 {
-    color: #bdff00;
-    font-family: "Rochester", cursive;
-    font-weight: 400;
-    font-size: 2rem;
+  color: #bdff00;
+  font-family: "Rochester", cursive;
+  font-weight: 400;
+  font-size: 2rem;
 }
 
 @media screen and (max-width: 768px) and (min-width: 321px) {
-    header h1 {
-        font-size: 1.5rem;
-        font-weight: 300;
-    }
+  header h1 {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  header h1 {
+    font-size: 1.25rem;
+    font-weight: 300;
+  }
 }
 
 header ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    list-style-type: none;
-    gap: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style-type: none;
+  gap: 1.5rem;
 }
 
 @media screen and (max-width: 768px) and (min-width: 321px) {
-    header ul {
-        font-size: 0.9rem;
-        font-weight: 300;
-    }
+  header ul {
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  header ul {
+    display: none;
+  }
 }
 
 header ul li {
-    cursor: pointer;
-    color: #cccccc;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+  cursor: pointer;
+  color: #cccccc;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 header ul li.active {
-    color: #bdff00;
-    font-weight: bold;
+  color: #bdff00;
+  font-weight: bold;
 }
 
 header ul li:hover {
-    color: #a0d11b;
+  color: #a0d11b;
 }
 
 header ul li.hire-me {
-    color: #bdff00;
-    border: 2px solid white;
-    padding: 0.25rem 1rem;
-    border-radius: 5rem;
+  color: #bdff00;
+  border: 2px solid white;
+  padding: 0.25rem 1rem;
+  border-radius: 5rem;
 }
 
 header ul li.hire-me:hover {
-    background-color: #bdff00;
-    color: #221f48;
-    border-color: #bdff00;
+  background-color: #bdff00;
+  color: #221f48;
+  border-color: #bdff00;
 }
 /*# sourceMappingURL=header.css.map */

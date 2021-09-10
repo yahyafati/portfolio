@@ -21,12 +21,21 @@ $font-weight-bold: 700;
 #shallWeSection {
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 3rem 0;
+
+    @media screen and (max-width: 320px) {
+        padding: 3rem 0.5rem;
+    }
 
     .h-line {
         background-color: white;
         width: 10%;
         height: 1px;
+
+        @media screen and (max-width: 320px) {
+            display: none;
+        }
     }
 
     .text-container {
@@ -60,17 +69,30 @@ $font-weight-bold: 700;
                 border-color: $background-color;
             }
         }
+
+        @media screen and (max-width: 320px) {
+            padding: 0.5rem 1rem;
+            flex-grow: 1;
+            // border-radius: 0;
+
+            .shallWe {
+                font-size: 0.85rem;
+            }
+
+            .letsGo {
+                font-size: 0.85rem;
+                padding: 0.25rem 1rem;
+            }
+        }
     }
 }
 
 #contactSection {
     display: flex;
     flex-direction: column;
-    // justify-content: space-between;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    // margin-top: 3rem;
     padding: 1.5rem 0;
     min-height: 15rem;
 
@@ -100,5 +122,23 @@ $font-weight-bold: 700;
     .credit {
         font-weight: $font-weight-light;
         font-size: 0.8rem;
+    }
+
+    @media screen and (max-width: 320px) {
+        .name {
+            font-size: 1rem;
+        }
+
+        .icons {
+            gap: 0.5rem;
+            .icon {
+                width: 1rem;
+                height: 1rem;
+            }
+        }
+
+        .credit {
+            font-size: 0.75rem;
+        }
     }
 }
