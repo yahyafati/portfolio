@@ -53,6 +53,16 @@ $font-weight-bold: 700;
         overflow-x: auto;
         padding: 1rem;
 
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: white;
+            outline: none;
+        }
+
+        &::-webkit-scrollbar-thumb:active {
+            background-color: white;
+        }
+
         .project-item {
             background-color: $card-background;
             border-radius: 5px;

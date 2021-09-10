@@ -83,6 +83,25 @@ $font-weight-bold: 700;
                 }
             }
         }
+
+        @media screen and (max-width: 640px) and (min-width: 321px) {
+            width: 180px;
+
+            .hi {
+                font-size: 1rem;
+            }
+
+            .work {
+                font-size: 0.8rem;
+            }
+
+            .buttons {
+                .button {
+                    font-size: 0.5rem;
+                    padding: 0.25rem 0.5rem;
+                }
+            }
+        }
     }
 
     .introImg {
@@ -90,6 +109,10 @@ $font-weight-bold: 700;
 
         @media screen and (max-width: 320px) {
             display: none;
+        }
+
+        @media screen and (max-width: 640px) and (min-width: 321px) {
+            width: 180px;
         }
     }
 }

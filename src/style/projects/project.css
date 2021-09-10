@@ -50,6 +50,16 @@
   padding: 1rem;
 }
 
+#projectSection .projectList::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: white;
+  outline: none;
+}
+
+#projectSection .projectList::-webkit-scrollbar-thumb:active {
+  background-color: white;
+}
+
 #projectSection .projectList .project-item {
   background-color: #2b2665;
   border-radius: 5px;

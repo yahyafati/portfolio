@@ -37,7 +37,7 @@ header {
         width: 2rem;
         height: 2rem;
 
-        @media screen and (max-width: 320px) {
+        @media screen and (max-width: 641px) {
             display: block;
         }
     }
@@ -69,7 +69,7 @@ header {
             font-weight: $font-weight-light;
         }
 
-        @media screen and (max-width: 320px) {
+        @media screen and (max-width: 641px) {
             display: none;
         }
 

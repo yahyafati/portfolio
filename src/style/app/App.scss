@@ -24,6 +24,10 @@ body {
 }
 
 #AppContainer {
+    // * {
+    //     outline: 2px solid #f00 !important;
+    // }
+
     .button {
         cursor: pointer;
         background-color: white;
@@ -45,6 +49,7 @@ body {
 
 ::-webkit-scrollbar {
     width: 0.5rem;
+    height: 0.5rem;
 }
 
 ::-webkit-scrollbar-track {

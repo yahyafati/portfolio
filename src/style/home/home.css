@@ -91,6 +91,22 @@
   }
 }
 
+@media screen and (max-width: 640px) and (min-width: 321px) {
+  #homeSection .intro_text {
+    width: 180px;
+  }
+  #homeSection .intro_text .hi {
+    font-size: 1rem;
+  }
+  #homeSection .intro_text .work {
+    font-size: 0.8rem;
+  }
+  #homeSection .intro_text .buttons .button {
+    font-size: 0.5rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
 #homeSection .introImg {
   width: 50%;
 }
@@ -98,6 +114,12 @@
 @media screen and (max-width: 320px) {
   #homeSection .introImg {
     display: none;
+  }
+}
+
+@media screen and (max-width: 640px) and (min-width: 321px) {
+  #homeSection .introImg {
+    width: 180px;
   }
 }
 /*# sourceMappingURL=home.css.map */
