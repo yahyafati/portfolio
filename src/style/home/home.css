@@ -1,1 +1,53 @@
-/* No CSS *//*# sourceMappingURL=home.css.map */
+#homeSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#homeSection .intro_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#homeSection .intro_text .hi {
+  font-size: 2rem;
+}
+
+#homeSection .intro_text .name {
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  color: #bdff00;
+  font-weight: 700;
+  font-size: 7rem;
+}
+
+#homeSection .intro_text .work {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+#homeSection .intro_text .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+#homeSection .introImg {
+  width: 50%;
+}
+/*# sourceMappingURL=home.css.map */

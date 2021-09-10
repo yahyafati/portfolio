@@ -7,4 +7,23 @@ body {
 #AppContainer {
   padding: 1.5rem 3rem;
 }
+
+#AppContainer .button {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+#AppContainer .button:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+#AppContainer .button.primary {
+  font-weight: 500;
+  background-color: #bdff00;
+  color: #221f48;
+}
 /*# sourceMappingURL=App.css.map */

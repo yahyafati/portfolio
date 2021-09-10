@@ -24,4 +24,22 @@ body {
 
 #AppContainer {
     padding: 1.5rem 3rem;
+
+    .button {
+        cursor: pointer;
+        background-color: white;
+        color: black;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+
+        &:active {
+            transform: scale(0.9);
+        }
+
+        &.primary {
+            font-weight: $font-weight-medium;
+            background-color: $primary-color;
+            color: $background-color;
+        }
+    }
 }

@@ -15,3 +15,40 @@ $font-weight-regular: 400;
 $font-weight-medium: 500;
 $font-weight-semi-bold: 600;
 $font-weight-bold: 700;
+
+#homeSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .intro_text {
+        display: flex;
+        flex-direction: column;
+
+        .hi {
+            font-size: 2rem;
+        }
+
+        .name {
+            width: min-content;
+            color: $primary-color;
+            font-weight: $font-weight-bold;
+            font-size: 7rem;
+        }
+
+        .work {
+            font-weight: $font-weight-medium;
+            font-size: 1.5rem;
+        }
+
+        .buttons {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+    }
+
+    .introImg {
+        width: 50%;
+    }
+}
