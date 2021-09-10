@@ -1,0 +1,90 @@
+// Variable Declaration - Colors
+$background-color: #221f48;
+$lighter-background-color: #2b247c;
+$primary-color: #bdff00;
+
+$design-color: #faff00;
+$mobile-dev-color: #00ff29;
+$web-dev-color: #00ffe0;
+
+$card-background: #2b2665;
+
+// Variable Declaration - Fonts
+$font-family: "Poppins", sans-serif;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+#servicesSection {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 0;
+
+    h2 {
+        text-align: end;
+        font-size: 2.5rem;
+        font-weight: $font-weight-medium;
+
+        strong {
+            color: $primary-color;
+        }
+    }
+
+    .services {
+        display: flex;
+        justify-content: space-between;
+
+        .card-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            .col-1-container {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .card {
+                border-radius: 5px;
+                align-items: center;
+                background-color: $card-background;
+                padding: 2rem 1rem;
+
+                .card-icon {
+                    width: 5rem;
+                    height: 5rem;
+
+                    &.mobile {
+                        color: $mobile-dev-color;
+                    }
+                    &.design {
+                        color: $design-color;
+                    }
+                    &.web {
+                        color: $web-dev-color;
+                    }
+                }
+
+                h3 {
+                    font-weight: $font-weight-regular;
+                    font-size: 2rem;
+                }
+
+                p {
+                    font-weight: $font-weight-light;
+                }
+            }
+        }
+
+        .imgContainer {
+            width: 40%;
+            text-align: end;
+            .servicesImg {
+                width: 100%;
+            }
+        }
+    }
+}
