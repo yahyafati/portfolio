@@ -1,9 +1,8 @@
 import React from "react";
-import { SiAndroid, SiVisualstudiocode } from "react-icons/si";
-import { FaPaintBrush } from "react-icons/fa";
 import hereAreServices from "../../svg/Services.svg";
 
 import "../../style/service/service.css";
+import ServiceCard from "./ServiceCard";
 
 const Services = () => {
     return (
@@ -14,33 +13,25 @@ const Services = () => {
             <div className="services">
                 <div className="card-container">
                     <div className="col-1-container">
-                        <div className="card">
-                            <SiAndroid className="card-icon mobile" />
-                            <h3>Mobile Development</h3>
-                            <p>
-                                Build highly interactive and intuitive mobile
-                                apps
-                            </p>
-                        </div>
-
-                        <div className="card">
-                            <SiVisualstudiocode className="card-icon web" />
-                            <h3>Web Development</h3>
-                            <p>
-                                Develop Solid, Reliable, Secure and Scalable
-                                Websites from scratch
-                            </p>
-                        </div>
+                        <ServiceCard
+                            type="mobile"
+                            body="Build highly interactive and intuitive mobile
+                                apps"
+                            title="Mobile Development"
+                        />
+                        <ServiceCard
+                            type="web"
+                            body="Develop Solid, Reliable, Secure and Scalable
+                                Websites from scratch"
+                            title="Web Development"
+                        />
                     </div>
-
-                    <div className="card">
-                        <FaPaintBrush className="card-icon design" />
-                        <h3>Design</h3>
-                        <p>
-                            Design sweet UI with amazing detail to user
-                            experience
-                        </p>
-                    </div>
+                    <ServiceCard
+                        type="design"
+                        body="Design sweet UI with amazing detail to user
+                            experience"
+                        title="Mobile Development"
+                    />
                 </div>
 
                 <div className="imgContainer">
