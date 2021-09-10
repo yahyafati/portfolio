@@ -22,7 +22,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  z-index: 10;
+  z-index: 100;
 }
 
 #homeSection .intro_text .hi {

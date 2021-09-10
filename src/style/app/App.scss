@@ -45,6 +45,79 @@ body {
             color: $background-color;
         }
     }
+
+    .option-button {
+        display: flex;
+        cursor: pointer;
+        color: $primary-color;
+        width: 2rem;
+        height: 2rem;
+
+        flex-direction: column;
+        justify-content: space-around;
+        align-content: center;
+
+        .line {
+            height: 3px;
+            background-color: white;
+        }
+
+        &.close {
+            .line {
+                &.line1 {
+                    animation: turn 0.5s ease-in-out;
+                    animation-fill-mode: forwards;
+
+                    @keyframes turn {
+                        0% {
+                            transform: translateX(0%);
+                        }
+
+                        100% {
+                            transform: translate(0%, 10px) rotateZ(45deg)
+                                scale(1);
+                        }
+                    }
+                }
+
+                &.line2 {
+                    animation: goaway 0.5s ease-in-out 0.4s;
+                    animation-fill-mode: forwards;
+
+                    @keyframes goaway {
+                        0% {
+                            transform: translateX(0%);
+                        }
+
+                        25% {
+                            transform: translateX(-50%);
+                        }
+
+                        100% {
+                            transform: translateX(100vw);
+                        }
+                    }
+                }
+
+                &.line3 {
+                    animation: turnDown 0.5s ease-in-out;
+                    animation-fill-mode: forwards;
+
+                    @keyframes turnDown {
+                        0% {
+                            transform: translateX(0%);
+                        }
+
+                        100% {
+                            transform: translate(0%, -10px) rotateZ(-45deg)
+                                scale(1);
+                            // transform: translateX(100vw);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 ::-webkit-scrollbar {

@@ -17,6 +17,11 @@ $font-weight-medium: 500;
 $font-weight-semi-bold: 600;
 $font-weight-bold: 700;
 
+// zIndices
+
+$navBarUlZIndex: 200;
+$introTextZIndex: 100;
+
 #homeSection {
     display: flex;
     justify-content: space-around;
@@ -32,7 +37,7 @@ $font-weight-bold: 700;
         display: flex;
         justify-content: center;
         flex-direction: column;
-        z-index: 10;
+        z-index: $introTextZIndex;
 
         .hi {
             font-size: 2rem;

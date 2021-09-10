@@ -15,6 +15,11 @@ $font-weight-medium: 500;
 $font-weight-semi-bold: 600;
 $font-weight-bold: 700;
 
+// zIndices
+
+$navBarUlZIndex: 200;
+$introTextZIndex: 100;
+
 header {
     display: flex;
     justify-content: space-between;
@@ -32,13 +37,9 @@ header {
 
     .option-button {
         display: none;
-        cursor: pointer;
-        color: $primary-color;
-        width: 2rem;
-        height: 2rem;
 
         @media screen and (max-width: 641px) {
-            display: block;
+            display: flex;
         }
     }
     h1 {
@@ -58,46 +59,74 @@ header {
         }
     }
 
-    ul {
+    .navbar-link-container {
         display: flex;
-        align-items: center;
-        list-style-type: none;
-        gap: 1.5rem;
-
-        @media screen and (max-width: 768px) {
-            font-size: 0.9rem;
-            font-weight: $font-weight-light;
+        flex-direction: column;
+        .option-button {
+            align-self: center;
+            justify-self: flex-end;
         }
+        ul {
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+            gap: 1.5rem;
 
-        @media screen and (max-width: 641px) {
-            display: none;
-        }
-
-        li {
-            cursor: pointer;
-            color: $inactive-navbar-link-color;
-            width: fit-content;
-
-            &.active {
-                color: $active-navbar-link-color;
-                font-weight: bold;
+            @media screen and (max-width: 768px) {
+                font-size: 0.9rem;
+                font-weight: $font-weight-light;
             }
 
-            &:hover {
-                color: $secondary-color;
-            }
+            li {
+                cursor: pointer;
+                color: $inactive-navbar-link-color;
+                width: fit-content;
 
-            &.hire-me {
-                color: $primary-color;
-                border: 2px solid white;
-                padding: 0.25rem 1rem;
-                border-radius: 5rem;
+                &.active {
+                    color: $active-navbar-link-color;
+                    font-weight: bold;
+                }
 
                 &:hover {
-                    background-color: $primary-color;
-                    color: $background-color;
-                    border-color: $primary-color;
+                    color: $secondary-color;
                 }
+
+                &.hire-me {
+                    color: $primary-color;
+                    border: 2px solid white;
+                    padding: 0.25rem 1rem;
+                    border-radius: 5rem;
+
+                    &:hover {
+                        background-color: $primary-color;
+                        color: $background-color;
+                        border-color: $primary-color;
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 641px) {
+            padding: 1.5rem;
+            z-index: $navBarUlZIndex;
+            background-color: $background-color;
+            position: fixed;
+            top: 0;
+            left: 0;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 100vw;
+            height: 100vh;
+
+            .close-option-button {
+                display: block;
+            }
+            ul {
+                justify-content: space-around;
+                flex-direction: column;
+                height: 100%;
+            }
+            &.collapsed {
+                display: none;
             }
         }
     }

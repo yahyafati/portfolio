@@ -23,6 +23,124 @@ body {
   color: #221f48;
 }
 
+#AppContainer .option-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  color: #bdff00;
+  width: 2rem;
+  height: 2rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+#AppContainer .option-button .line {
+  height: 3px;
+  background-color: white;
+}
+
+#AppContainer .option-button.close .line.line1 {
+  -webkit-animation: turn 0.5s ease-in-out;
+          animation: turn 0.5s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes turn {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translate(0%, 10px) rotateZ(45deg) scale(1);
+            transform: translate(0%, 10px) rotateZ(45deg) scale(1);
+  }
+}
+
+@keyframes turn {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translate(0%, 10px) rotateZ(45deg) scale(1);
+            transform: translate(0%, 10px) rotateZ(45deg) scale(1);
+  }
+}
+
+#AppContainer .option-button.close .line.line2 {
+  -webkit-animation: goaway 0.5s ease-in-out 0.4s;
+          animation: goaway 0.5s ease-in-out 0.4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes goaway {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  25% {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  100% {
+    -webkit-transform: translateX(100vw);
+            transform: translateX(100vw);
+  }
+}
+
+@keyframes goaway {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  25% {
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  100% {
+    -webkit-transform: translateX(100vw);
+            transform: translateX(100vw);
+  }
+}
+
+#AppContainer .option-button.close .line.line3 {
+  -webkit-animation: turnDown 0.5s ease-in-out;
+          animation: turnDown 0.5s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes turnDown {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translate(0%, -10px) rotateZ(-45deg) scale(1);
+            transform: translate(0%, -10px) rotateZ(-45deg) scale(1);
+  }
+}
+
+@keyframes turnDown {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translate(0%, -10px) rotateZ(-45deg) scale(1);
+            transform: translate(0%, -10px) rotateZ(-45deg) scale(1);
+  }
+}
+
 ::-webkit-scrollbar {
   width: 0.5rem;
   height: 0.5rem;
