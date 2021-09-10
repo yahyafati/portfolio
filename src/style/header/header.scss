@@ -1,0 +1,64 @@
+$background-color: #221f48;
+$primary-color: #bdff00;
+$secondary-color: rgb(160, 209, 27);
+
+$font-family-logo: "Rochester", cursive;
+
+$inactive-navbar-link-color: #cccccc;
+$active-navbar-link-color: $primary-color;
+
+// Variable Declaration - Fonts
+$font-family: "Poppins", sans-serif;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // background-color: blue;
+
+    h1 {
+        color: $primary-color;
+        font-family: $font-family-logo;
+        font-weight: $font-weight-regular;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        gap: 1.5rem;
+
+        li {
+            cursor: pointer;
+            color: $inactive-navbar-link-color;
+            width: fit-content;
+
+            &.active {
+                color: $active-navbar-link-color;
+                font-weight: bold;
+            }
+
+            &:hover {
+                color: $secondary-color;
+            }
+
+            &.hire-me {
+                color: $primary-color;
+                border: 2px solid white;
+                padding: 0.25rem 1rem;
+                border-radius: 5rem;
+
+                &:hover {
+                    background-color: $primary-color;
+                    color: $background-color;
+                    border-color: $primary-color;
+                }
+            }
+        }
+    }
+}
