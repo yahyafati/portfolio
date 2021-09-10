@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { GoThreeBars } from "react-icons/go";
 import { AiOutlineClose } from "react-icons/ai";
 import "../../style/header/header.css";
+import { Link } from "react-router-dom";
+import Hamburger from "../Hamburger";
 
 const Header = () => {
     const [showMenu, setShowMenu] = useState(false);
@@ -16,27 +18,33 @@ const Header = () => {
             <div
                 className={`${!showMenu && "collapsed"} navbar-link-container`}
             >
-                <div
+                <Hamburger
                     className={`option-button ${showMenu && "close"}`}
                     onClick={toggleShow}
-                >
-                    <div className="line line1" />
-                    <div className="line line2" />
-                    <div className="line line3" />
-                </div>
+                />
+
                 <ul>
-                    <li className="active">Home</li>
-                    <li>Services</li>
-                    <li>Works</li>
-                    <li>Contact</li>
-                    <li className="hire-me">Hire Me</li>
+                    <li className="active" onClick={(e) => setShowMenu(false)}>
+                        <a href="/#homeSection">Home</a>
+                    </li>
+                    <li className="" onClick={(e) => setShowMenu(false)}>
+                        <a href="#servicesSection">Services</a>
+                    </li>
+                    <li className="" onClick={(e) => setShowMenu(false)}>
+                        <a href="#projectSection">Works</a>
+                    </li>
+                    <li className="" onClick={(e) => setShowMenu(false)}>
+                        <a href="#shallWeSection">Contact</a>
+                    </li>
+                    <li className="hire-me" onClick={(e) => setShowMenu(false)}>
+                        Hire Me
+                    </li>
                 </ul>
             </div>
-            <div className="option-button" onClick={toggleShow}>
-                <div className="line" />
-                <div className="line" />
-                <div className="line" />
-            </div>
+            <Hamburger
+                className={`option-button ${showMenu && "close"}`}
+                onClick={toggleShow}
+            />
             {/* <GoThreeBars className="option-button" onClick={toggleShow} /> */}
         </header>
     );

@@ -23,8 +23,10 @@ header {
   }
 }
 
-header .option-button {
-  display: none;
+@media screen and (min-width: 641px) {
+  header .option-button {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 641px) {
@@ -66,7 +68,7 @@ header .navbar-link-container {
           flex-direction: column;
 }
 
-header .navbar-link-container .option-button {
+header .navbar-link-container .option-button.hamburger {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -138,8 +140,10 @@ header .navbar-link-container ul li.hire-me:hover {
     width: 100vw;
     height: 100vh;
   }
-  header .navbar-link-container .close-option-button {
-    display: block;
+  header .navbar-link-container .option-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
   header .navbar-link-container ul {
     -ms-flex-pack: distribute;

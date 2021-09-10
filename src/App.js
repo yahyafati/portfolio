@@ -1,4 +1,5 @@
 import React from "react";
+import { BrowserRouter } from "react-router-dom";
 import About from "./component/about/About";
 import Contact from "./component/contact/Contact";
 import Header from "./component/header/Header";
@@ -11,16 +12,18 @@ import "./style/app/App.css";
 
 const App = () => {
     return (
-        <div id="AppContainer">
-            <Header />
-            <Home />
-            <About />
-            <Services />
-            <Projects />
-            <Testimonial />
-            <ShallWe />
-            <Contact />
-        </div>
+        <BrowserRouter>
+            <div id="AppContainer">
+                <Header />
+                <Home />
+                <About />
+                <Services />
+                <Projects />
+                <Testimonial />
+                <ShallWe />
+                <Contact />
+            </div>
+        </BrowserRouter>
     );
 };
 

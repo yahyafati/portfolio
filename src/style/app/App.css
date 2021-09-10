@@ -4,26 +4,7 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-#AppContainer .button {
-  cursor: pointer;
-  background-color: white;
-  color: black;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-}
-
-#AppContainer .button:active {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
-}
-
-#AppContainer .button.primary {
-  font-weight: 500;
-  background-color: #bdff00;
-  color: #221f48;
-}
-
-#AppContainer .option-button {
+.hamburger {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41,12 +22,12 @@ body {
       align-content: center;
 }
 
-#AppContainer .option-button .line {
+.hamburger .line {
   height: 3px;
   background-color: white;
 }
 
-#AppContainer .option-button.close .line.line1 {
+.hamburger.close .line.line1 {
   -webkit-animation: turn 0.5s ease-in-out;
           animation: turn 0.5s ease-in-out;
   -webkit-animation-fill-mode: forwards;
@@ -75,7 +56,7 @@ body {
   }
 }
 
-#AppContainer .option-button.close .line.line2 {
+.hamburger.close .line.line2 {
   -webkit-animation: goaway 0.5s ease-in-out 0.4s;
           animation: goaway 0.5s ease-in-out 0.4s;
   -webkit-animation-fill-mode: forwards;
@@ -112,7 +93,7 @@ body {
   }
 }
 
-#AppContainer .option-button.close .line.line3 {
+.hamburger.close .line.line3 {
   -webkit-animation: turnDown 0.5s ease-in-out;
           animation: turnDown 0.5s ease-in-out;
   -webkit-animation-fill-mode: forwards;
@@ -139,6 +120,25 @@ body {
     -webkit-transform: translate(0%, -10px) rotateZ(-45deg) scale(1);
             transform: translate(0%, -10px) rotateZ(-45deg) scale(1);
   }
+}
+
+#AppContainer .button {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+#AppContainer .button:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+#AppContainer .button.primary {
+  font-weight: 500;
+  background-color: #bdff00;
+  color: #221f48;
 }
 
 ::-webkit-scrollbar {
