@@ -86,7 +86,7 @@ header {
 
                 &.active {
                     color: $active-navbar-link-color;
-                    font-weight: bold;
+                    font-weight: $font-weight-bold;
                 }
 
                 &:hover {

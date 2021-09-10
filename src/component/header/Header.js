@@ -1,15 +1,18 @@
 import React, { useState } from "react";
-import { GoThreeBars } from "react-icons/go";
-import { AiOutlineClose } from "react-icons/ai";
 import "../../style/header/header.css";
-import { Link } from "react-router-dom";
 import Hamburger from "../Hamburger";
 
 const Header = () => {
     const [showMenu, setShowMenu] = useState(false);
+    const [currentSection, setCurrentSection] = useState("home");
 
     const toggleShow = () => {
         setShowMenu((current) => !current);
+    };
+
+    const linkClicked = (e, value) => {
+        setCurrentSection(value);
+        setShowMenu(false);
     };
 
     return (
@@ -24,19 +27,39 @@ const Header = () => {
                 />
 
                 <ul>
-                    <li className="active" onClick={(e) => setShowMenu(false)}>
+                    <li
+                        className={`${
+                            currentSection === "home" ? "active" : ""
+                        }`}
+                        onClick={(e) => linkClicked(e, "home")}
+                    >
                         <a href="/#homeSection">Home</a>
                     </li>
-                    <li className="" onClick={(e) => setShowMenu(false)}>
+                    <li
+                        className={`${
+                            currentSection === "services" ? "active" : ""
+                        }`}
+                        onClick={(e) => linkClicked(e, "services")}
+                    >
                         <a href="#servicesSection">Services</a>
                     </li>
-                    <li className="" onClick={(e) => setShowMenu(false)}>
+                    <li
+                        className={`${
+                            currentSection === "projects" ? "active" : ""
+                        }`}
+                        onClick={(e) => linkClicked(e, "projects")}
+                    >
                         <a href="#projectSection">Works</a>
                     </li>
-                    <li className="" onClick={(e) => setShowMenu(false)}>
+                    <li
+                        className={`${
+                            currentSection === "contact" ? "active" : ""
+                        }`}
+                        onClick={(e) => linkClicked(e, "contact")}
+                    >
                         <a href="#shallWeSection">Contact</a>
                     </li>
-                    <li className="hire-me" onClick={(e) => setShowMenu(false)}>
+                    <li className="hire-me" onClick={linkClicked}>
                         Hire Me
                     </li>
                 </ul>

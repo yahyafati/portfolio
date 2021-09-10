@@ -103,7 +103,7 @@ header .navbar-link-container ul li {
 
 header .navbar-link-container ul li.active {
   color: #bdff00;
-  font-weight: bold;
+  font-weight: 700;
 }
 
 header .navbar-link-container ul li:hover {
