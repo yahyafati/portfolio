@@ -4,6 +4,7 @@ import Header from "./component/header/Header";
 import Home from "./component/home/Home";
 import Projects from "./component/project/Projects";
 import Services from "./component/service/Services";
+import ShallWe from "./component/shallWe/ShallWe";
 import Testimonial from "./component/testimonial/Testimonial";
 import "./style/app/App.css";
 
@@ -16,6 +17,7 @@ const App = () => {
             <Services />
             <Projects />
             <Testimonial />
+            <ShallWe />
         </div>
     );
 };

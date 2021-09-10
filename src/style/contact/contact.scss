@@ -1,0 +1,63 @@
+// Variable Declaration - Colors
+$background-color: #221f48;
+$lighter-background-color: #2b247c;
+$primary-color: #bdff00;
+
+$design-color: #faff00;
+$mobile-dev-color: #00ff29;
+$web-dev-color: #00ffe0;
+
+$card-background: #2b2665;
+
+// Variable Declaration - Fonts
+$font-family: "Poppins", sans-serif;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+#shallWeSection {
+    display: flex;
+    align-items: center;
+    padding: 3rem 0;
+
+    .h-line {
+        background-color: white;
+        width: 10rem;
+        height: 1px;
+    }
+
+    .text-container {
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: white;
+        color: $background-color;
+        padding: 1.5rem 2rem;
+        border-radius: 10rem;
+
+        .shallWe {
+            font-weight: $font-weight-light;
+            font-size: 1.5rem;
+        }
+
+        .letsGo {
+            cursor: pointer;
+            background-color: $background-color;
+            font-weight: $font-weight-light;
+            color: white;
+            padding: 0.5rem 2.5rem;
+            border-radius: 10rem;
+            font-size: 1.5rem;
+            border: 2px solid transparent;
+
+            &:active {
+                background-color: white;
+                color: $background-color;
+                border-color: $background-color;
+            }
+        }
+    }
+}
