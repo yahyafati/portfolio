@@ -76,6 +76,11 @@ $font-weight-bold: 700;
                 }
             }
 
+            @media screen and (max-width: 640px) {
+                width: unset;
+
+            }
+
             @media screen and (max-width: 320px) {
                 width: unset;
                 margin: 0 0.25rem;

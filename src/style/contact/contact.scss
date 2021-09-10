@@ -70,10 +70,8 @@ $font-weight-bold: 700;
             }
         }
 
-        @media screen and (max-width: 320px) {
-            padding: 0.5rem 1rem;
-            flex-grow: 1;
-            // border-radius: 0;
+        @media screen and (max-width: 640px) {
+            padding: 0.75rem 1.5rem;
 
             .shallWe {
                 font-size: 0.85rem;
@@ -81,6 +79,19 @@ $font-weight-bold: 700;
 
             .letsGo {
                 font-size: 0.85rem;
+                padding: 0.25rem 1rem;
+            }
+        }
+
+        @media screen and (max-width: 320px) {
+            padding: 0.5rem 1rem;
+
+            .shallWe {
+                font-size: 0.7rem;
+            }
+
+            .letsGo {
+                font-size: 0.7rem;
                 padding: 0.25rem 1rem;
             }
         }
