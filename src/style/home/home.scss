@@ -1,5 +1,6 @@
 // Variable Declaration - Colors
 $background-color: #221f48;
+$lighter-background-color: #2b247c;
 $primary-color: #bdff00;
 
 $design-color: #faff00;
@@ -20,6 +21,12 @@ $font-weight-bold: 700;
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    background: linear-gradient(
+        180deg,
+        $background-color 0%,
+        $lighter-background-color 100%
+    );
 
     .intro_text {
         display: flex;

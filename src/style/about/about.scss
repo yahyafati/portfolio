@@ -1,0 +1,67 @@
+// Variable Declaration - Colors
+$background-color: #221f48;
+$lighter-background-color: #2b247c;
+$primary-color: #bdff00;
+
+$design-color: #faff00;
+$mobile-dev-color: #00ff29;
+$web-dev-color: #00ffe0;
+
+$card-background: #2b2665;
+
+// Variable Declaration - Fonts
+$font-family: "Poppins", sans-serif;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+#aboutSection {
+    display: flex;
+    align-items: center;
+    padding: 3rem 0;
+    border-radius: 0px 0px 100px 100px;
+
+    background: linear-gradient(
+        180deg,
+        $lighter-background-color 0%,
+        $background-color 100%
+    );
+
+    .imgContainer {
+        min-width: 50%;
+        .aboutImg {
+            width: 80%;
+        }
+    }
+
+    .aboutText {
+        flex-basis: 1;
+        text-align: center;
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: $font-weight-medium;
+
+            .love {
+                font-weight: $font-weight-bold;
+                color: pink;
+            }
+
+            .code {
+                font-weight: $font-weight-bold;
+            }
+        }
+
+        p.about {
+            font-weight: $font-weight-light;
+            font-size: 1.2rem;
+
+            strong {
+                color: $primary-color;
+                font-weight: $font-weight-bold;
+            }
+        }
+    }
+}

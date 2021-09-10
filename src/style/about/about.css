@@ -1,0 +1,51 @@
+#aboutSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3rem 0;
+  border-radius: 0px 0px 100px 100px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2b247c), to(#221f48));
+  background: linear-gradient(180deg, #2b247c 0%, #221f48 100%);
+}
+
+#aboutSection .imgContainer {
+  min-width: 50%;
+}
+
+#aboutSection .imgContainer .aboutImg {
+  width: 80%;
+}
+
+#aboutSection .aboutText {
+  -ms-flex-preferred-size: 1;
+      flex-basis: 1;
+  text-align: center;
+}
+
+#aboutSection .aboutText h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+#aboutSection .aboutText h2 .love {
+  font-weight: 700;
+  color: pink;
+}
+
+#aboutSection .aboutText h2 .code {
+  font-weight: 700;
+}
+
+#aboutSection .aboutText p.about {
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+#aboutSection .aboutText p.about strong {
+  color: #bdff00;
+  font-weight: 700;
+}
+/*# sourceMappingURL=about.css.map */
