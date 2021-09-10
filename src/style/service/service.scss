@@ -45,7 +45,7 @@ $font-weight-bold: 700;
         display: flex;
         justify-content: space-between;
 
-        @media screen and (max-width: 768px) and (min-width: 321px) {
+        @media screen and (max-width: 768px) {
             flex-direction: column;
         }
 
@@ -54,7 +54,7 @@ $font-weight-bold: 700;
             align-items: center;
             gap: 1rem;
 
-            @media screen and (max-width: 768px) and (min-width: 321px) {
+            @media screen and (max-width: 768px) {
                 flex-direction: column;
                 justify-content: center;
                 gap: 2rem;

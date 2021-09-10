@@ -32,13 +32,10 @@ $font-weight-bold: 700;
         display: flex;
         justify-content: center;
         flex-direction: column;
+        z-index: 10;
 
         .hi {
             font-size: 2rem;
-
-            @media screen and (max-width: 768px) and (min-width: 321px) {
-                font-size: 1.5rem;
-            }
         }
 
         .name {
@@ -46,41 +43,31 @@ $font-weight-bold: 700;
             color: $primary-color;
             font-weight: $font-weight-bold;
             font-size: 7rem;
-
-            @media screen and (max-width: 768px) and (min-width: 321px) {
-                font-size: 4rem;
-            }
-
-            @media screen and (max-width: 320px) {
-                font-size: 3.5rem;
-            }
         }
 
         .work {
             font-weight: $font-weight-medium;
             font-size: 1.5rem;
-
-            @media screen and (max-width: 768px) and (min-width: 321px) {
-                font-size: 1rem;
-                font-weight: $font-weight-light;
-            }
-
-            @media screen and (max-width: 320px) {
-                font-weight: $font-weight-light;
-                font-size: 0.8rem;
-            }
         }
 
         .buttons {
             display: flex;
             align-items: center;
             gap: 1rem;
+        }
 
-            .button {
-                @media screen and (max-width: 320px) {
-                    font-size: 0.5rem;
-                    padding: 0.25rem 0.5rem;
-                }
+        @media screen and (max-width: 768px) {
+            .hi {
+                font-size: 1.5rem;
+            }
+
+            .name {
+                font-size: 5rem;
+            }
+
+            .work {
+                font-size: 1rem;
+                font-weight: $font-weight-light;
             }
         }
 
@@ -91,7 +78,29 @@ $font-weight-bold: 700;
                 font-size: 1rem;
             }
 
+            .name {
+                font-size: 3rem;
+            }
+
             .work {
+                font-size: 0.8rem;
+            }
+
+            .buttons {
+                .button {
+                    font-size: 0.6rem;
+                    padding: 0.2rem 0.5rem;
+                }
+            }
+        }
+
+        @media screen and (max-width: 320px) {
+            .name {
+                font-size: 3.5rem;
+            }
+
+            .work {
+                font-weight: $font-weight-light;
                 font-size: 0.8rem;
             }
 
@@ -112,7 +121,7 @@ $font-weight-bold: 700;
         }
 
         @media screen and (max-width: 640px) and (min-width: 321px) {
-            width: 180px;
+            width: 35%;
         }
     }
 }

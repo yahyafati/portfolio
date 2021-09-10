@@ -22,16 +22,11 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  z-index: 10;
 }
 
 #homeSection .intro_text .hi {
   font-size: 2rem;
-}
-
-@media screen and (max-width: 768px) and (min-width: 321px) {
-  #homeSection .intro_text .hi {
-    font-size: 1.5rem;
-  }
 }
 
 #homeSection .intro_text .name {
@@ -43,35 +38,9 @@
   font-size: 7rem;
 }
 
-@media screen and (max-width: 768px) and (min-width: 321px) {
-  #homeSection .intro_text .name {
-    font-size: 4rem;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  #homeSection .intro_text .name {
-    font-size: 3.5rem;
-  }
-}
-
 #homeSection .intro_text .work {
   font-weight: 500;
   font-size: 1.5rem;
-}
-
-@media screen and (max-width: 768px) and (min-width: 321px) {
-  #homeSection .intro_text .work {
-    font-size: 1rem;
-    font-weight: 300;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  #homeSection .intro_text .work {
-    font-weight: 300;
-    font-size: 0.8rem;
-  }
 }
 
 #homeSection .intro_text .buttons {
@@ -84,10 +53,16 @@
   gap: 1rem;
 }
 
-@media screen and (max-width: 320px) {
-  #homeSection .intro_text .buttons .button {
-    font-size: 0.5rem;
-    padding: 0.25rem 0.5rem;
+@media screen and (max-width: 768px) {
+  #homeSection .intro_text .hi {
+    font-size: 1.5rem;
+  }
+  #homeSection .intro_text .name {
+    font-size: 5rem;
+  }
+  #homeSection .intro_text .work {
+    font-size: 1rem;
+    font-weight: 300;
   }
 }
 
@@ -98,7 +73,24 @@
   #homeSection .intro_text .hi {
     font-size: 1rem;
   }
+  #homeSection .intro_text .name {
+    font-size: 3rem;
+  }
   #homeSection .intro_text .work {
+    font-size: 0.8rem;
+  }
+  #homeSection .intro_text .buttons .button {
+    font-size: 0.6rem;
+    padding: 0.2rem 0.5rem;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #homeSection .intro_text .name {
+    font-size: 3.5rem;
+  }
+  #homeSection .intro_text .work {
+    font-weight: 300;
     font-size: 0.8rem;
   }
   #homeSection .intro_text .buttons .button {
@@ -119,7 +111,7 @@
 
 @media screen and (max-width: 640px) and (min-width: 321px) {
   #homeSection .introImg {
-    width: 180px;
+    width: 35%;
   }
 }
 /*# sourceMappingURL=home.css.map */
