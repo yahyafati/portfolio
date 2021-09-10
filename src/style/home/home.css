@@ -15,6 +15,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -23,6 +26,12 @@
 
 #homeSection .intro_text .hi {
   font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  #homeSection .intro_text .hi {
+    font-size: 1.5rem;
+  }
 }
 
 #homeSection .intro_text .name {
@@ -34,9 +43,22 @@
   font-size: 7rem;
 }
 
+@media screen and (max-width: 768px) {
+  #homeSection .intro_text .name {
+    font-size: 4rem;
+  }
+}
+
 #homeSection .intro_text .work {
   font-weight: 500;
   font-size: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  #homeSection .intro_text .work {
+    font-size: 1rem;
+    font-weight: 300;
+  }
 }
 
 #homeSection .intro_text .buttons {

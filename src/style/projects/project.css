@@ -9,6 +9,12 @@
   padding: 3rem;
 }
 
+@media screen and (max-width: 768px) {
+  #projectSection {
+    padding: 5rem 1rem;
+  }
+}
+
 #projectSection h2 {
   text-align: center;
   font-size: 2.5rem;

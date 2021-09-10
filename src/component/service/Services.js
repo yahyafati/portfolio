@@ -14,6 +14,13 @@ const Services = () => {
                 <div className="card-container">
                     <div className="col-1-container">
                         <ServiceCard
+                            type="design"
+                            body="Design sweet UI with amazing detail to user
+                            experience"
+                            title="Design"
+                            className="not-big-screen"
+                        />
+                        <ServiceCard
                             type="mobile"
                             body="Build highly interactive and intuitive mobile
                                 apps"
@@ -30,7 +37,8 @@ const Services = () => {
                         type="design"
                         body="Design sweet UI with amazing detail to user
                             experience"
-                        title="Mobile Development"
+                        title="Design"
+                        className="big-screen"
                     />
                 </div>
 

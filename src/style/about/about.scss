@@ -20,6 +20,7 @@ $font-weight-bold: 700;
 
 #aboutSection {
     display: flex;
+    justify-content: center;
     align-items: center;
     padding: 3rem;
     border-radius: 0px 0px 100px 100px;
@@ -30,7 +31,15 @@ $font-weight-bold: 700;
         $background-color 100%
     );
 
+    @media screen and (max-width: 768px) {
+        padding: 5rem 2rem;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+
     .imgContainer {
+        text-align: center;
         min-width: 50%;
         .aboutImg {
             width: 80%;

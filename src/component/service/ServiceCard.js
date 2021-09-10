@@ -8,9 +8,9 @@ const servicesMap = {
     design: <FaPaintBrush className="card-icon design" />,
 };
 
-const ServiceCard = ({ type, title, body }) => {
+const ServiceCard = ({ type, title, body, className }) => {
     return (
-        <div className="card">
+        <div className={`card ${className}`}>
             {servicesMap[type]}
             <h3>{title}</h3>
             <p>{body}</p>

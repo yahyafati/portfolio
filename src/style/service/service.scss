@@ -38,10 +38,20 @@ $font-weight-bold: 700;
         display: flex;
         justify-content: space-between;
 
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+
         .card-container {
             display: flex;
             align-items: center;
             gap: 1rem;
+
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+                justify-content: center;
+                gap: 2rem;
+            }
 
             .col-1-container {
                 display: flex;
@@ -54,6 +64,10 @@ $font-weight-bold: 700;
                 align-items: center;
                 background-color: $card-background;
                 padding: 2rem 1rem;
+
+                &.not-big-screen {
+                    display: none;
+                }
 
                 .card-icon {
                     width: 5rem;
@@ -78,6 +92,16 @@ $font-weight-bold: 700;
                 p {
                     font-weight: $font-weight-light;
                 }
+
+                @media screen and (max-width: 768px) {
+                    &.big-screen {
+                        display: none;
+                    }
+
+                    &.not-big-screen {
+                        display: block;
+                    }
+                }
             }
         }
 
@@ -86,6 +110,10 @@ $font-weight-bold: 700;
             text-align: end;
             .servicesImg {
                 width: 100%;
+            }
+
+            @media screen and (max-width: 768px) {
+                display: none;
             }
         }
     }
