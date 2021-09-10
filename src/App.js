@@ -1,5 +1,6 @@
 import React from "react";
 import About from "./component/about/About";
+import Contact from "./component/contact/Contact";
 import Header from "./component/header/Header";
 import Home from "./component/home/Home";
 import Projects from "./component/project/Projects";
@@ -18,6 +19,7 @@ const App = () => {
             <Projects />
             <Testimonial />
             <ShallWe />
+            <Contact />
         </div>
     );
 };
