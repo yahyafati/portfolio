@@ -38,7 +38,7 @@ $font-weight-bold: 700;
         display: flex;
         justify-content: space-between;
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 768px) and (min-width: 321px) {
             flex-direction: column;
         }
 
@@ -47,7 +47,7 @@ $font-weight-bold: 700;
             align-items: center;
             gap: 1rem;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 768px) and (min-width: 321px) {
                 flex-direction: column;
                 justify-content: center;
                 gap: 2rem;
@@ -93,7 +93,7 @@ $font-weight-bold: 700;
                     font-weight: $font-weight-light;
                 }
 
-                @media screen and (max-width: 768px) {
+                @media screen and (max-width: 768px) and (min-width: 321px) {
                     &.big-screen {
                         display: none;
                     }
@@ -112,7 +112,7 @@ $font-weight-bold: 700;
                 width: 100%;
             }
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 768px) and (min-width: 321px) {
                 display: none;
             }
         }

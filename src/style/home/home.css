@@ -28,7 +28,7 @@
   font-size: 2rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (min-width: 321px) {
   #homeSection .intro_text .hi {
     font-size: 1.5rem;
   }
@@ -43,7 +43,7 @@
   font-size: 7rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (min-width: 321px) {
   #homeSection .intro_text .name {
     font-size: 4rem;
   }
@@ -54,7 +54,7 @@
   font-size: 1.5rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) and (min-width: 321px) {
   #homeSection .intro_text .work {
     font-size: 1rem;
     font-weight: 300;

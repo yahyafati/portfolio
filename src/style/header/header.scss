@@ -22,7 +22,7 @@ header {
     padding: 3rem;
     // background-color: blue;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 768px) and (min-width: 321px) {
         padding: 2rem;
     }
 
@@ -32,7 +32,7 @@ header {
         font-weight: $font-weight-regular;
         font-size: 2rem;
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 768px) and (min-width: 321px) {
             font-size: 1.5rem;
             font-weight: $font-weight-light;
         }
@@ -44,7 +44,7 @@ header {
         list-style-type: none;
         gap: 1.5rem;
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 768px) and (min-width: 321px) {
             font-size: 0.9rem;
             font-weight: $font-weight-light;
         }

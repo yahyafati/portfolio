@@ -36,7 +36,7 @@ $font-weight-bold: 700;
         .hi {
             font-size: 2rem;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 768px) and (min-width: 321px) {
                 font-size: 1.5rem;
             }
         }
@@ -47,7 +47,7 @@ $font-weight-bold: 700;
             font-weight: $font-weight-bold;
             font-size: 7rem;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 768px) and (min-width: 321px) {
                 font-size: 4rem;
             }
         }
@@ -56,7 +56,7 @@ $font-weight-bold: 700;
             font-weight: $font-weight-medium;
             font-size: 1.5rem;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 768px) and (min-width: 321px) {
                 font-size: 1rem;
                 font-weight: $font-weight-light;
             }
