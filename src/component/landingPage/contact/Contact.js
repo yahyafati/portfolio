@@ -1,5 +1,5 @@
 import React from "react";
-import "../../style/contact/contact.css";
+import "../../../style/contact/contact.css";
 import SocialMediaIcons from "./SocialMediaIcons";
 
 const Contact = () => {

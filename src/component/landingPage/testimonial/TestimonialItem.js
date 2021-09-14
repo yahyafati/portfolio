@@ -1,5 +1,5 @@
 import React from "react";
-import profileSVG from "../../svg/Profile.svg";
+import profileSVG from "../../../svg/Profile.svg";
 
 const TestimonialItem = () => {
     return (

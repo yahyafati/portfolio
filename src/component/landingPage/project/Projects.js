@@ -1,10 +1,10 @@
 import React from "react";
-import "../../style/projects/project.css";
+import "../../../style/projects/project.css";
 import ProjectItem from "./ProjectItem";
-import blog from "../../svg/Blog.svg";
-import helio from "../../svg/HelioIMS.svg";
-import octopus from "../../svg/Octopus.svg";
-import hanan from "../../svg/Hanan.svg";
+import blog from "../../../svg/Blog.svg";
+import helio from "../../../svg/HelioIMS.svg";
+import octopus from "../../../svg/Octopus.svg";
+import hanan from "../../../svg/Hanan.svg";
 
 const Projects = () => {
     return (

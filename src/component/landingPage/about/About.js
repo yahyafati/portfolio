@@ -1,6 +1,6 @@
 import React from "react";
-import hiFromDev from "../../svg/About.svg";
-import "../../style/about/about.css";
+import hiFromDev from "../../../svg/About.svg";
+import "../../../style/about/about.css";
 
 const About = () => {
     return (

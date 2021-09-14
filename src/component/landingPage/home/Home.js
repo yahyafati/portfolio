@@ -1,6 +1,6 @@
 import React from "react";
-import "../../style/home/home.css";
-import standingManSVG from "../../svg/Home.svg";
+import "../../../style/home/home.css";
+import standingManSVG from "../../../svg/Home.svg";
 
 const Home = () => {
     return (

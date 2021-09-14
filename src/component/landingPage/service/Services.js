@@ -1,7 +1,7 @@
 import React from "react";
-import hereAreServices from "../../svg/Services.svg";
+import hereAreServices from "../../../svg/Services.svg";
 
-import "../../style/service/service.css";
+import "../../../style/service/service.css";
 import ServiceCard from "./ServiceCard";
 
 const Services = () => {

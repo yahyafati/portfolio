@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "../../style/header/header.css";
-import Hamburger from "../Hamburger";
+import "../../../style/header/header.css";
+import Hamburger from "../../Hamburger";
 
 const Header = () => {
     const [showMenu, setShowMenu] = useState(false);
