@@ -54,7 +54,7 @@ const Header = ({currentPage, setCurrentPage}) => {
                         <Link to={"/contact"}>Contact</Link>
                     </li>
                     <li className="hire-me" onClick={linkClicked}>
-                        Hire Me
+                        <Link to={"/contact"}>Hire Me</Link>
                     </li>
                 </ul>
             </div>
