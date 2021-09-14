@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "description": "My Portfolio Website",
     "main": "index.js",
-    "homepage": "https://navy87.github.io/beautiful-portfolio",
+    "homepage": "https://navy87.github.io/",
     "scripts": {
         "start": "webpack-dev-server --mode=development --open --hot",
         "build": "webpack --mode=production",
