@@ -1,13 +1,32 @@
 #contactPage {
-  padding: 0 3rem;
+  padding: 3rem;
   display: flex;
   gap: 1rem;
-  justify-content: center;
-  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  #contactPage {
+    padding: 2rem;
+  }
+}
+@media screen and (max-width: 640px) {
+  #contactPage {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  #contactPage {
+    padding: 1rem;
+  }
 }
 #contactPage .contactImg {
   margin: auto;
   width: 40%;
+}
+@media screen and (max-width: 640px) {
+  #contactPage .contactImg {
+    width: 80%;
+  }
 }
 #contactPage .contact-form-container {
   display: flex;
@@ -64,6 +83,34 @@
 #contactPage .contact-form-container .contact-form button:active {
   border-radius: 3px;
   transform: scale(0.98);
+}
+@media screen and (max-width: 640px) {
+  #contactPage .contact-form-container .form-welcome {
+    font-size: 2.5rem;
+  }
+  #contactPage .contact-form-container .contact-form {
+    gap: 0.5rem;
+  }
+  #contactPage .contact-form-container .contact-form input, #contactPage .contact-form-container .contact-form textarea {
+    padding: 0.75rem;
+  }
+  #contactPage .contact-form-container .contact-form button {
+    padding: 0.75rem;
+  }
+}
+@media screen and (max-width: 320px) {
+  #contactPage .contact-form-container .form-welcome {
+    font-size: 2rem;
+  }
+  #contactPage .contact-form-container .contact-form {
+    gap: 0.5rem;
+  }
+  #contactPage .contact-form-container .contact-form input, #contactPage .contact-form-container .contact-form textarea {
+    padding: 0.75rem;
+  }
+  #contactPage .contact-form-container .contact-form button {
+    padding: 0.75rem;
+  }
 }
 
 /*# sourceMappingURL=contactPage.css.map */

@@ -22,14 +22,31 @@ $introTextZIndex: 100;
 
 
 #contactPage {
-  padding: 0 3rem;
+  padding: 3rem;
   display: flex;
   gap: 1rem;
-  justify-content: center;
-  align-items: center;
+
+
+  @media screen and (max-width: 768px) {
+    padding: 2rem;
+  }
+
+  @media screen and (max-width: 640px) {
+    flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  @media screen and (max-width: 320px) {
+    padding: 1rem;
+  }
+
   .contactImg {
     margin: auto;
     width: 40%;
+
+    @media screen and (max-width: 640px) {
+      width: 80%;
+    }
   }
 
   .contact-form-container {
@@ -95,6 +112,46 @@ $introTextZIndex: 100;
         &:active {
           border-radius: 3px;
           transform: scale(.98);
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+
+    }
+
+    @media screen and (max-width: 640px) {
+      .form-welcome {
+        font-size: 2.5rem;
+      }
+
+      .contact-form {
+        gap: .5rem;
+
+        input, textarea {
+          padding: .75rem;
+        }
+
+        button {
+          padding: .75rem;
+        }
+      }
+    }
+
+    @media screen and (max-width: 320px) {
+      .form-welcome {
+        font-size: 2rem;
+      }
+
+      .contact-form {
+        gap: .5rem;
+
+        input, textarea {
+          padding: .75rem;
+        }
+
+        button {
+          padding: .75rem;
         }
       }
     }
