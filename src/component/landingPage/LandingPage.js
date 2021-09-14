@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Header from "./header/Header";
+import Header from "../header/Header";
 import Home from "./home/Home";
 import About from "./about/About";
 import Services from "./service/Services";
@@ -12,7 +12,6 @@ class LandingPage extends Component {
     render() {
         return (
             <div id="AppContainer">
-                <Header />
                 <Home />
                 <About />
                 <Services />

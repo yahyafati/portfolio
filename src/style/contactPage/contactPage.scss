@@ -1,0 +1,102 @@
+$background-color: #221f48;
+$primary-color: #bdff00;
+$secondary-color: rgb(160, 209, 27);
+
+$font-family-logo: "Rochester", cursive;
+
+$inactive-navbar-link-color: #cccccc;
+$active-navbar-link-color: $primary-color;
+
+// Variable Declaration - Fonts
+$font-family: "Poppins", sans-serif;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+// zIndices
+
+$navBarUlZIndex: 200;
+$introTextZIndex: 100;
+
+
+#contactPage {
+  padding: 0 3rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  .contactImg {
+    margin: auto;
+    width: 40%;
+  }
+
+  .contact-form-container {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .form-welcome {
+      font-size: 3rem;
+      font-weight: $font-weight-light;
+      margin-bottom: 2rem;
+
+      strong {
+        color: $primary-color;
+      }
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+
+      input, textarea {
+        outline: none;
+        padding: 1rem;
+        //width: 100%;
+        background-color: transparent;
+        color: white;
+        border: none;
+        border-bottom: 1.5px solid white;
+        resize: vertical;
+
+        &::placeholder {
+          color: #aaa;
+        }
+
+        &:focus {
+          border-bottom: 2px solid $primary-color;
+        }
+      }
+
+      textarea {
+        height: 5rem;
+      }
+
+      button {
+        cursor: pointer;
+        outline: none;
+        border: none;
+        padding: 1rem;
+        font-weight: $font-weight-bold;
+        transition: all 0.25s;
+        font-size: 1rem;
+
+        &.submit-button {
+          background-color: $primary-color;
+          color: $background-color;
+        }
+
+        &:active {
+          border-radius: 3px;
+          transform: scale(.98);
+        }
+      }
+    }
+  }
+}

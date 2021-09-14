@@ -1,13 +1,15 @@
-import React, {Component} from 'react';
+import React from 'react';
+import ContactForm from "./ContactForm";
+import ContactSVG from "../../svg/Contact.svg"
+import "../../style/contactPage/contactPage.css"
 
-class ContactPage extends Component {
-    render() {
-        return (
-            <div>
-
-            </div>
-        );
-    }
-}
+const ContactPage = () => {
+    return (
+        <div id={"contactPage"}>
+            <img className={"contactImg"} src={ContactSVG} alt={"Contact Us Image"}/>
+            <ContactForm />
+        </div>
+    );
+};
 
 export default ContactPage;
