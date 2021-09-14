@@ -75,7 +75,7 @@ $introTextZIndex: 100;
       input, textarea {
         outline: none;
         padding: 1rem;
-        //width: 100%;
+        font-weight: $font-weight-medium;
         background-color: transparent;
         color: white;
         border: none;
@@ -83,6 +83,7 @@ $introTextZIndex: 100;
         resize: vertical;
 
         &::placeholder {
+          font-weight: $font-weight-light;
           color: #aaa;
         }
 
