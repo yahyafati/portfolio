@@ -19,82 +19,82 @@ $font-weight-semi-bold: 600;
 $font-weight-bold: 700;
 
 #projectSection {
-    display: flex;
-    flex-direction: column;
-    padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
 
-    @media screen and (max-width: 768px) {
-        padding: 5rem 1rem;
+  @media screen and (max-width: 768px) {
+    padding: 5rem 1rem;
+  }
+
+  @media screen and (max-width: 320px) {
+    padding: 5rem 0.25rem;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: $font-weight-medium;
+    padding-bottom: 2rem;
+
+    strong {
+      color: $primary-color;
     }
 
     @media screen and (max-width: 320px) {
-        padding: 5rem 0.25rem;
+      font-size: 1.25rem;
+    }
+  }
+
+  .projectList {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    overflow-x: auto;
+    padding: 1rem;
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: white;
+      outline: none;
     }
 
-    h2 {
-        text-align: center;
-        font-size: 2.5rem;
-        font-weight: $font-weight-medium;
-        padding-bottom: 2rem;
-
-        strong {
-            color: $primary-color;
-        }
-
-        @media screen and (max-width: 320px) {
-            font-size: 1.25rem;
-        }
+    &::-webkit-scrollbar-thumb:active {
+      background-color: white;
     }
 
-    .projectList {
-        display: flex;
+    .project-item {
+      background-color: $card-background;
+      border-radius: 5px;
+      background-color: $card-background;
+      padding: 1.5rem 1rem;
+      text-align: center;
+
+      .project-icon {
+        height: 10rem;
+        width: 15rem;
+      }
+
+      .title {
+        font-weight: $font-weight-regular;
+        font-size: 1.5rem;
+      }
+
+      @media screen and (max-width: 320px) {
+        flex-direction: column;
         justify-content: center;
-        gap: 1rem;
-        overflow-x: auto;
-        padding: 1rem;
+        gap: 2rem;
 
-        &::-webkit-scrollbar-thumb {
-            border-radius: 10px;
-            background-color: white;
-            outline: none;
+        .project-icon {
+          height: 5rem;
+          width: 10rem;
         }
 
-        &::-webkit-scrollbar-thumb:active {
-            background-color: white;
+        .title {
+          font-size: 1rem;
+          font-weight: $font-weight-light;
         }
-
-        .project-item {
-            background-color: $card-background;
-            border-radius: 5px;
-            background-color: $card-background;
-            padding: 1.5rem 1rem;
-            text-align: center;
-
-            .project-icon {
-                height: 10rem;
-                width: 15rem;
-            }
-
-            .title {
-                font-weight: $font-weight-regular;
-                font-size: 1.5rem;
-            }
-
-            @media screen and (max-width: 320px) {
-                flex-direction: column;
-                justify-content: center;
-                gap: 2rem;
-
-                .project-icon {
-                    height: 5rem;
-                    width: 10rem;
-                }
-
-                .title {
-                    font-size: 1rem;
-                    font-weight: $font-weight-light;
-                }
-            }
-        }
+      }
     }
+  }
 }

@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProjectItem = ({ icon, title }) => {
+const ProjectItem = ({icon, title}) => {
     return (
         <div className="project-item">
             <img

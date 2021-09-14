@@ -23,111 +23,111 @@ $navBarUlZIndex: 200;
 $introTextZIndex: 100;
 
 #homeSection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+
+  background: linear-gradient(
+                  180deg,
+                  $background-color 0%,
+                  $lighter-background-color 100%
+  );
+
+  .intro_text {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1rem;
+    justify-content: center;
+    flex-direction: column;
+    z-index: $introTextZIndex;
 
-    background: linear-gradient(
-        180deg,
-        $background-color 0%,
-        $lighter-background-color 100%
-    );
-
-    .intro_text {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        z-index: $introTextZIndex;
-
-        .hi {
-            font-size: 2rem;
-        }
-
-        .name {
-            width: min-content;
-            color: $primary-color;
-            font-weight: $font-weight-bold;
-            font-size: 7rem;
-        }
-
-        .work {
-            font-weight: $font-weight-medium;
-            font-size: 1.5rem;
-        }
-
-        .buttons {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        @media screen and (max-width: 768px) {
-            .hi {
-                font-size: 1.5rem;
-            }
-
-            .name {
-                font-size: 5rem;
-            }
-
-            .work {
-                font-size: 1rem;
-                font-weight: $font-weight-light;
-            }
-        }
-
-        @media screen and (max-width: 640px) and (min-width: 321px) {
-            width: 180px;
-
-            .hi {
-                font-size: 1rem;
-            }
-
-            .name {
-                font-size: 3rem;
-            }
-
-            .work {
-                font-size: 0.8rem;
-            }
-
-            .buttons {
-                .button {
-                    font-size: 0.6rem;
-                    padding: 0.2rem 0.5rem;
-                }
-            }
-        }
-
-        @media screen and (max-width: 320px) {
-            .name {
-                font-size: 3.5rem;
-            }
-
-            .work {
-                font-weight: $font-weight-light;
-                font-size: 0.8rem;
-            }
-
-            .buttons {
-                .button {
-                    font-size: 0.5rem;
-                    padding: 0.25rem 0.5rem;
-                }
-            }
-        }
+    .hi {
+      font-size: 2rem;
     }
 
-    .introImg {
-        width: 50%;
-
-        @media screen and (max-width: 320px) {
-            display: none;
-        }
-
-        @media screen and (max-width: 640px) and (min-width: 321px) {
-            width: 35%;
-        }
+    .name {
+      width: min-content;
+      color: $primary-color;
+      font-weight: $font-weight-bold;
+      font-size: 7rem;
     }
+
+    .work {
+      font-weight: $font-weight-medium;
+      font-size: 1.5rem;
+    }
+
+    .buttons {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      .hi {
+        font-size: 1.5rem;
+      }
+
+      .name {
+        font-size: 5rem;
+      }
+
+      .work {
+        font-size: 1rem;
+        font-weight: $font-weight-light;
+      }
+    }
+
+    @media screen and (max-width: 640px) and (min-width: 321px) {
+      width: 180px;
+
+      .hi {
+        font-size: 1rem;
+      }
+
+      .name {
+        font-size: 3rem;
+      }
+
+      .work {
+        font-size: 0.8rem;
+      }
+
+      .buttons {
+        .button {
+          font-size: 0.6rem;
+          padding: 0.2rem 0.5rem;
+        }
+      }
+    }
+
+    @media screen and (max-width: 320px) {
+      .name {
+        font-size: 3.5rem;
+      }
+
+      .work {
+        font-weight: $font-weight-light;
+        font-size: 0.8rem;
+      }
+
+      .buttons {
+        .button {
+          font-size: 0.5rem;
+          padding: 0.25rem 0.5rem;
+        }
+      }
+    }
+  }
+
+  .introImg {
+    width: 50%;
+
+    @media screen and (max-width: 320px) {
+      display: none;
+    }
+
+    @media screen and (max-width: 640px) and (min-width: 321px) {
+      width: 35%;
+    }
+  }
 }

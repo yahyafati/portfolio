@@ -9,7 +9,7 @@ const Testimonial = () => {
                 <strong>Kinds words</strong> I’ve received over the years
             </h2>
             <div className="testimonials">
-                <TestimonialItem />
+                <TestimonialItem/>
             </div>
         </div>
     );

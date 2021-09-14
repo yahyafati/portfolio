@@ -7,7 +7,7 @@ const ContactPage = () => {
     return (
         <div id={"contactPage"}>
             <img className={"contactImg"} src={ContactSVG} alt={"Contact Us Image"}/>
-            <ContactForm />
+            <ContactForm/>
         </div>
     );
 };

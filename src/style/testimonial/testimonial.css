@@ -1,94 +1,63 @@
 #testimonialSection {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   padding: 3rem;
 }
-
 @media screen and (max-width: 320px) {
   #testimonialSection {
     padding: 5rem 0.5rem;
   }
 }
-
 #testimonialSection h2 {
   text-align: center;
   font-size: 2.5rem;
   font-weight: 500;
   padding-bottom: 2rem;
 }
-
 #testimonialSection h2 strong {
   color: #bdff00;
 }
-
 @media screen and (max-width: 320px) {
   #testimonialSection h2 {
     font-size: 1.5rem;
   }
 }
-
 #testimonialSection .testimonials {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 #testimonialSection .testimonials .testimonialItem {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   gap: 1rem;
   width: 70%;
   padding: 1.5rem 1rem;
   background-color: #2b2665;
 }
-
 #testimonialSection .testimonials .testimonialItem .profileImg {
   width: 6rem;
 }
-
 #testimonialSection .testimonials .testimonialItem .body {
   font-weight: 300;
   width: 80%;
   text-align: center;
 }
-
 #testimonialSection .testimonials .testimonialItem .credit {
   text-align: center;
 }
-
 #testimonialSection .testimonials .testimonialItem .credit .by {
   font-weight: 600;
 }
-
 #testimonialSection .testimonials .testimonialItem .credit .relation {
   font-weight: 300;
 }
-
 @media screen and (max-width: 640px) {
   #testimonialSection .testimonials .testimonialItem {
     width: unset;
   }
 }
-
 @media screen and (max-width: 320px) {
   #testimonialSection .testimonials .testimonialItem {
     width: unset;
@@ -108,4 +77,5 @@
     font-size: 0.85rem;
   }
 }
+
 /*# sourceMappingURL=testimonial.css.map */

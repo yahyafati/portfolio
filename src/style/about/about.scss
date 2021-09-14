@@ -19,73 +19,74 @@ $font-weight-semi-bold: 600;
 $font-weight-bold: 700;
 
 #aboutSection {
-    display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  border-radius: 0px 0px 100px 100px;
+
+  background: linear-gradient(
+                  180deg,
+                  $lighter-background-color 0%,
+                  $background-color 100%
+  );
+
+  @media screen and (max-width: 768px) {
+    padding: 5rem 2rem;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 3rem;
-    border-radius: 0px 0px 100px 100px;
+    gap: 2rem;
+  }
 
-    background: linear-gradient(
-        180deg,
-        $lighter-background-color 0%,
-        $background-color 100%
-    );
+  @media screen and (max-width: 320px) {
+    padding: 5rem 1rem;
+    flex-direction: column;
+    justify-content: center;
+  }
 
-    @media screen and (max-width: 768px) {
-        padding: 5rem 2rem;
-        flex-direction: column;
-        justify-content: center;
-        gap: 2rem;
+  .imgContainer {
+    text-align: center;
+    min-width: 50%;
+
+    .aboutImg {
+      width: 80%;
+    }
+  }
+
+  .aboutText {
+    flex-basis: 1;
+    text-align: center;
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: $font-weight-medium;
+
+      .love {
+        font-weight: $font-weight-bold;
+        color: pink;
+      }
+
+      .code {
+        font-weight: $font-weight-bold;
+      }
+
+      @media screen and (max-width: 320px) {
+        font-size: 1.5rem;
+      }
     }
 
-    @media screen and (max-width: 320px) {
-        padding: 5rem 1rem;
-        flex-direction: column;
-        justify-content: center;
+    p.about {
+      font-weight: $font-weight-light;
+      font-size: 1.2rem;
+
+      strong {
+        color: $primary-color;
+        font-weight: $font-weight-bold;
+      }
+
+      @media screen and (max-width: 320px) {
+        font-size: 0.85rem;
+      }
     }
-
-    .imgContainer {
-        text-align: center;
-        min-width: 50%;
-        .aboutImg {
-            width: 80%;
-        }
-    }
-
-    .aboutText {
-        flex-basis: 1;
-        text-align: center;
-
-        h2 {
-            font-size: 2.5rem;
-            font-weight: $font-weight-medium;
-
-            .love {
-                font-weight: $font-weight-bold;
-                color: pink;
-            }
-
-            .code {
-                font-weight: $font-weight-bold;
-            }
-
-            @media screen and (max-width: 320px) {
-                font-size: 1.5rem;
-            }
-        }
-
-        p.about {
-            font-weight: $font-weight-light;
-            font-size: 1.2rem;
-
-            strong {
-                color: $primary-color;
-                font-weight: $font-weight-bold;
-            }
-
-            @media screen and (max-width: 320px) {
-                font-size: 0.85rem;
-            }
-        }
-    }
+  }
 }

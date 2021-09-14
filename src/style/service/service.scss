@@ -19,125 +19,129 @@ $font-weight-semi-bold: 600;
 $font-weight-bold: 700;
 
 #servicesSection {
-    display: flex;
-    flex-direction: column;
-    padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+
+  @media screen and (max-width: 320px) {
+    padding: 5rem 1rem;
+  }
+
+  h2 {
+    text-align: end;
+    font-size: 2.5rem;
+    font-weight: $font-weight-medium;
+    padding-bottom: 2rem;
+
+    strong {
+      color: $primary-color;
+    }
 
     @media screen and (max-width: 320px) {
-        padding: 5rem 1rem;
+      font-size: 1.5rem;
     }
-    h2 {
-        text-align: end;
-        font-size: 2.5rem;
-        font-weight: $font-weight-medium;
-        padding-bottom: 2rem;
+  }
 
-        strong {
-            color: $primary-color;
+  .services {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    .card-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+      }
+
+      @media screen and (max-width: 320px) {
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+      }
+
+      .col-1-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .card {
+        border-radius: 5px;
+        align-items: center;
+        background-color: $card-background;
+        padding: 2rem 1rem;
+
+        &.not-big-screen {
+          display: none;
+        }
+
+        .card-icon {
+          width: 5rem;
+          height: 5rem;
+
+          &.mobile {
+            color: $mobile-dev-color;
+          }
+
+          &.design {
+            color: $design-color;
+          }
+
+          &.web {
+            color: $web-dev-color;
+          }
+        }
+
+        h3 {
+          font-weight: $font-weight-regular;
+          font-size: 2rem;
+        }
+
+        p {
+          font-weight: $font-weight-light;
+        }
+
+        @media screen and (max-width: 768px) {
+          &.big-screen {
+            display: none;
+          }
+
+          &.not-big-screen {
+            display: block;
+          }
         }
 
         @media screen and (max-width: 320px) {
-            font-size: 1.5rem;
+          h3 {
+            font-size: 1.25rem;
+          }
+
+          p {
+            font-size: 0.85rem;
+          }
         }
+      }
     }
 
-    .services {
-        display: flex;
-        justify-content: space-between;
+    .imgContainer {
+      width: 40%;
+      text-align: end;
 
-        @media screen and (max-width: 768px) {
-            flex-direction: column;
-        }
+      .servicesImg {
+        width: 100%;
+      }
 
-        .card-container {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-
-            @media screen and (max-width: 768px) {
-                flex-direction: column;
-                justify-content: center;
-                gap: 2rem;
-            }
-
-            @media screen and (max-width: 320px) {
-                flex-direction: column;
-                justify-content: center;
-                gap: 2rem;
-            }
-
-            .col-1-container {
-                display: flex;
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .card {
-                border-radius: 5px;
-                align-items: center;
-                background-color: $card-background;
-                padding: 2rem 1rem;
-
-                &.not-big-screen {
-                    display: none;
-                }
-
-                .card-icon {
-                    width: 5rem;
-                    height: 5rem;
-
-                    &.mobile {
-                        color: $mobile-dev-color;
-                    }
-                    &.design {
-                        color: $design-color;
-                    }
-                    &.web {
-                        color: $web-dev-color;
-                    }
-                }
-
-                h3 {
-                    font-weight: $font-weight-regular;
-                    font-size: 2rem;
-                }
-
-                p {
-                    font-weight: $font-weight-light;
-                }
-
-                @media screen and (max-width: 768px) {
-                    &.big-screen {
-                        display: none;
-                    }
-
-                    &.not-big-screen {
-                        display: block;
-                    }
-                }
-
-                @media screen and (max-width: 320px) {
-                    h3 {
-                        font-size: 1.25rem;
-                    }
-
-                    p {
-                        font-size: 0.85rem;
-                    }
-                }
-            }
-        }
-
-        .imgContainer {
-            width: 40%;
-            text-align: end;
-            .servicesImg {
-                width: 100%;
-            }
-
-            @media screen and (max-width: 768px) {
-                display: none;
-            }
-        }
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
     }
+  }
 }

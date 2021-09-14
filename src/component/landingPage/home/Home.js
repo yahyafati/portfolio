@@ -1,6 +1,7 @@
 import React from "react";
 import "../../../style/home/home.css";
 import standingManSVG from "../../../svg/Home.svg";
+import {Link} from "react-router-dom";
 
 const Home = () => {
     return (
@@ -10,7 +11,7 @@ const Home = () => {
                 <p className="name">Yahya Fati</p>
                 <p className="work">Freelance Web and Mobile Developer</p>
                 <div className="buttons">
-                    <a className="button primary">Contact Me</a>
+                    <Link to={"/contact"} className="button primary">Contact Me</Link>
                     <a className="button">Download CV</a>
                 </div>
             </div>

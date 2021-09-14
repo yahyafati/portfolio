@@ -1,23 +1,26 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import "../../style/header/header.css";
 import Hamburger from "../Hamburger";
+import {Link} from "react-router-dom";
+import {HashLink} from "react-router-hash-link";
 
-const Header = () => {
+const Header = ({currentPage, setCurrentPage}) => {
     const [showMenu, setShowMenu] = useState(false);
-    const [currentSection, setCurrentSection] = useState("home");
 
     const toggleShow = () => {
         setShowMenu((current) => !current);
     };
 
     const linkClicked = (e, value) => {
-        setCurrentSection(value);
-        setShowMenu(false);
+        e.preventDefault();
+        setCurrentPage(value)
     };
 
     return (
         <header>
-            <h1>Yahya Fati</h1>
+            <Link to={"/"} className={"logo-title"}>
+                <h1>Yahya Fati</h1>
+            </Link>
             <div
                 className={`${!showMenu && "collapsed"} navbar-link-container`}
             >
@@ -28,36 +31,27 @@ const Header = () => {
 
                 <ul>
                     <li
-                        className={`${
-                            currentSection === "home" ? "active" : ""
-                        }`}
+                        className={currentPage === "home" ? "active" : ""}
                         onClick={(e) => linkClicked(e, "home")}
                     >
-                        <a href="/#homeSection">Home</a>
+                        <Link to={"/#homeSection"}>Home</Link>
                     </li>
                     <li
-                        className={`${
-                            currentSection === "services" ? "active" : ""
-                        }`}
+                        className={currentPage === "services" ? "active" : ""}
                         onClick={(e) => linkClicked(e, "services")}
                     >
-                        <a href="#servicesSection">Services</a>
+                        <HashLink to={"/#servicesSection"}>Section</HashLink>
                     </li>
                     <li
-                        className={`${
-                            currentSection === "projects" ? "active" : ""
-                        }`}
+                        className={currentPage === "projects" ? "active" : ""}
                         onClick={(e) => linkClicked(e, "projects")}
                     >
-                        <a href="#projectSection">Works</a>
+                        <HashLink to="/#projectSection">Works</HashLink>
                     </li>
                     <li
-                        className={`${
-                            currentSection === "contact" ? "active" : ""
-                        }`}
-                        onClick={(e) => linkClicked(e, "contact")}
+                        className={currentPage === "contact" ? "active" : ""}
                     >
-                        <a href="#shallWeSection">Contact</a>
+                        <Link to={"/contact"}>Contact</Link>
                     </li>
                     <li className="hire-me" onClick={linkClicked}>
                         Hire Me

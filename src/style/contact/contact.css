@@ -1,58 +1,38 @@
 #shallWeSection {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   padding: 3rem 0;
 }
-
 @media screen and (max-width: 320px) {
   #shallWeSection {
     padding: 3rem 0.5rem;
   }
 }
-
 #shallWeSection .h-line {
   background-color: white;
   width: 10%;
   height: 1px;
 }
-
 @media screen and (max-width: 320px) {
   #shallWeSection .h-line {
     display: none;
   }
 }
-
 #shallWeSection .text-container {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex-grow: 1;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   background-color: white;
   color: #221f48;
   padding: 1.5rem 2rem;
   border-radius: 10rem;
 }
-
 #shallWeSection .text-container .shallWe {
   font-weight: 300;
   font-size: 1.5rem;
 }
-
 #shallWeSection .text-container .letsGo {
   cursor: pointer;
   background-color: #221f48;
@@ -63,13 +43,11 @@
   font-size: 1.25rem;
   border: 2px solid transparent;
 }
-
 #shallWeSection .text-container .letsGo:active {
   background-color: white;
   color: #221f48;
   border-color: #221f48;
 }
-
 @media screen and (max-width: 640px) {
   #shallWeSection .text-container {
     padding: 0.75rem 1.5rem;
@@ -82,7 +60,6 @@
     padding: 0.25rem 1rem;
   }
 }
-
 @media screen and (max-width: 320px) {
   #shallWeSection .text-container {
     padding: 0.5rem 1rem;
@@ -97,19 +74,10 @@
 }
 
 #contactSection {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 2rem;
   padding: 1.5rem 0;
   min-height: 15rem;
@@ -117,35 +85,26 @@
   background-color: white;
   border-radius: 500px 500px 0 0;
 }
-
 #contactSection .name {
   font-weight: 300;
 }
-
 #contactSection .icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 2rem;
 }
-
 #contactSection .icons .icon {
   cursor: pointer;
   width: 2rem;
   height: 2rem;
-  -webkit-transition: none;
   transition: none;
 }
-
 #contactSection .icons .icon:active {
   color: #2b247c;
 }
-
 #contactSection .credit {
   font-weight: 300;
   font-size: 0.8rem;
 }
-
 @media screen and (max-width: 320px) {
   #contactSection .name {
     font-size: 1rem;
@@ -161,4 +120,5 @@
     font-size: 0.75rem;
   }
 }
+
 /*# sourceMappingURL=contact.css.map */
