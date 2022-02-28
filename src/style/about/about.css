@@ -1,65 +1,94 @@
 #aboutSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 3rem;
   border-radius: 0px 0px 100px 100px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2b247c), to(#221f48));
   background: linear-gradient(180deg, #2b247c 0%, #221f48 100%);
 }
+
 @media screen and (max-width: 768px) {
   #aboutSection {
     padding: 5rem 2rem;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 2rem;
   }
 }
+
 @media screen and (max-width: 320px) {
   #aboutSection {
     padding: 5rem 1rem;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
+
 #aboutSection .imgContainer {
   text-align: center;
   min-width: 50%;
 }
+
 #aboutSection .imgContainer .aboutImg {
   width: 80%;
 }
+
 #aboutSection .aboutText {
-  flex-basis: 1;
+  -ms-flex-preferred-size: 1;
+      flex-basis: 1;
   text-align: center;
 }
+
 #aboutSection .aboutText h2 {
   font-size: 2.5rem;
   font-weight: 500;
 }
+
 #aboutSection .aboutText h2 .love {
   font-weight: 700;
   color: pink;
 }
+
 #aboutSection .aboutText h2 .code {
   font-weight: 700;
 }
+
 @media screen and (max-width: 320px) {
   #aboutSection .aboutText h2 {
     font-size: 1.5rem;
   }
 }
+
 #aboutSection .aboutText p.about {
   font-weight: 300;
   font-size: 1.2rem;
 }
+
 #aboutSection .aboutText p.about strong {
   color: #bdff00;
   font-weight: 700;
 }
+
 @media screen and (max-width: 320px) {
   #aboutSection .aboutText p.about {
     font-size: 0.85rem;
   }
 }
-
 /*# sourceMappingURL=about.css.map */

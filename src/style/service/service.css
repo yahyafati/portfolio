@@ -1,89 +1,141 @@
 #servicesSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 3rem;
 }
+
 @media screen and (max-width: 320px) {
   #servicesSection {
     padding: 5rem 1rem;
   }
 }
+
 #servicesSection h2 {
   text-align: end;
   font-size: 2.5rem;
   font-weight: 500;
   padding-bottom: 2rem;
 }
+
 #servicesSection h2 strong {
   color: #bdff00;
 }
+
 @media screen and (max-width: 320px) {
   #servicesSection h2 {
     font-size: 1.5rem;
   }
 }
+
 #servicesSection .services {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 @media screen and (max-width: 768px) {
   #servicesSection .services {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
+
 #servicesSection .services .card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 1rem;
 }
+
 @media screen and (max-width: 768px) {
   #servicesSection .services .card-container {
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 2rem;
   }
 }
+
 @media screen and (max-width: 320px) {
   #servicesSection .services .card-container {
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 2rem;
   }
 }
+
 #servicesSection .services .card-container .col-1-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 1rem;
 }
+
 #servicesSection .services .card-container .card {
   border-radius: 5px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #2b2665;
   padding: 2rem 1rem;
 }
+
 #servicesSection .services .card-container .card.not-big-screen {
   display: none;
 }
+
 #servicesSection .services .card-container .card .card-icon {
   width: 5rem;
   height: 5rem;
 }
+
 #servicesSection .services .card-container .card .card-icon.mobile {
   color: #00ff29;
 }
+
 #servicesSection .services .card-container .card .card-icon.design {
   color: #faff00;
 }
+
 #servicesSection .services .card-container .card .card-icon.web {
   color: #00ffe0;
 }
+
 #servicesSection .services .card-container .card h3 {
   font-weight: 400;
   font-size: 2rem;
 }
+
 #servicesSection .services .card-container .card p {
   font-weight: 300;
 }
+
 @media screen and (max-width: 768px) {
   #servicesSection .services .card-container .card.big-screen {
     display: none;
@@ -92,6 +144,7 @@
     display: block;
   }
 }
+
 @media screen and (max-width: 320px) {
   #servicesSection .services .card-container .card h3 {
     font-size: 1.25rem;
@@ -100,17 +153,19 @@
     font-size: 0.85rem;
   }
 }
+
 #servicesSection .services .imgContainer {
   width: 40%;
   text-align: end;
 }
+
 #servicesSection .services .imgContainer .servicesImg {
   width: 100%;
 }
+
 @media screen and (max-width: 768px) {
   #servicesSection .services .imgContainer {
     display: none;
   }
 }
-
 /*# sourceMappingURL=service.css.map */

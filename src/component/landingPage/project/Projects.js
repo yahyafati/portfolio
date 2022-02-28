@@ -6,18 +6,31 @@ import helio from "../../../svg/HelioIMS.svg";
 import octopus from "../../../svg/Octopus.svg";
 import hanan from "../../../svg/Hanan.svg";
 
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
+
 const Projects = () => {
     return (
         <div id="projectSection">
             <h2>
                 So you wanna see my previous <strong>Projects</strong>
             </h2>
-            <div className="projectList">
-                <ProjectItem icon={helio} title="Helio IMS"/>
-                <ProjectItem icon={blog} title="LetMeTalk"/>
-                <ProjectItem icon={octopus} title="Octopus"/>
-                <ProjectItem icon={hanan} title="Hanan SAT Helper"/>
-            </div>
+            {/* <div className="projectList"> */}
+            <Carousel
+                className="projectList"
+                autoPlay={true}
+                infiniteLoop={true}
+                showStatus={false}
+                showArrows={false}
+                showIndicators={false}
+                emulateTouch={true}
+            >
+                <ProjectItem icon={helio} title="Helio IMS" />
+                <ProjectItem icon={blog} title="LetMeTalk" />
+                <ProjectItem icon={octopus} title="Octopus" />
+                <ProjectItem icon={hanan} title="Hanan SAT Helper" />
+            </Carousel>
+            {/* </div> */}
         </div>
     );
 };

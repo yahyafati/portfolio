@@ -1,66 +1,111 @@
 #projectSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 3rem;
 }
+
 @media screen and (max-width: 768px) {
   #projectSection {
     padding: 5rem 1rem;
   }
 }
+
 @media screen and (max-width: 320px) {
   #projectSection {
     padding: 5rem 0.25rem;
   }
 }
+
 #projectSection h2 {
   text-align: center;
   font-size: 2.5rem;
   font-weight: 500;
   padding-bottom: 2rem;
 }
+
 #projectSection h2 strong {
   color: #bdff00;
 }
+
 @media screen and (max-width: 320px) {
   #projectSection h2 {
     font-size: 1.25rem;
   }
 }
+
 #projectSection .projectList {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
   overflow-x: auto;
   padding: 1rem;
 }
+
 #projectSection .projectList::-webkit-scrollbar-thumb {
   border-radius: 10px;
   background-color: white;
   outline: none;
 }
+
 #projectSection .projectList::-webkit-scrollbar-thumb:active {
   background-color: white;
 }
+
+#projectSection .projectList .project-item-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 #projectSection .projectList .project-item {
   background-color: #2b2665;
   border-radius: 5px;
   background-color: #2b2665;
   padding: 1.5rem 1rem;
+  width: 70%;
   text-align: center;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
+
 #projectSection .projectList .project-item .project-icon {
   height: 10rem;
   width: 15rem;
 }
+
 #projectSection .projectList .project-item .title {
   font-weight: 400;
   font-size: 1.5rem;
 }
+
+@media screen and (max-width: 640px) {
+  #projectSection .projectList .project-item {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+
 @media screen and (max-width: 320px) {
   #projectSection .projectList .project-item {
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     gap: 2rem;
   }
   #projectSection .projectList .project-item .project-icon {
@@ -72,5 +117,4 @@
     font-weight: 300;
   }
 }
-
 /*# sourceMappingURL=project.css.map */
