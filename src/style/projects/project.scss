@@ -80,9 +80,21 @@ $font-weight-bold: 700;
                 width: 15rem;
             }
 
-            .title {
-                font-weight: $font-weight-regular;
-                font-size: 1.5rem;
+            .title-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 0.25rem;
+
+                .title {
+                    font-weight: $font-weight-regular;
+                    font-size: 1.5rem;
+                }
+
+                .git-icon {
+                    display: flex;
+                    font-size: 1.5rem;
+                }
             }
 
             @media screen and (max-width: 640px) {

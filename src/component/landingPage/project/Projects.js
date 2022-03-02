@@ -5,6 +5,7 @@ import blog from "../../../svg/Blog.svg";
 import helio from "../../../svg/HelioIMS.svg";
 import octopus from "../../../svg/Octopus.svg";
 import hanan from "../../../svg/Hanan.svg";
+import task from "../../../svg/Tasks.svg";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
@@ -25,10 +26,23 @@ const Projects = () => {
                 showIndicators={false}
                 emulateTouch={true}
             >
-                <ProjectItem icon={helio} title="Helio IMS" />
-                <ProjectItem icon={blog} title="LetMeTalk" />
-                <ProjectItem icon={octopus} title="Octopus" />
-                <ProjectItem icon={hanan} title="Hanan SAT Helper" />
+                <ProjectItem
+                    icon={helio}
+                    title="Helio IMS"
+                    href={"https://github.com/yahyafati/SMS"}
+                />
+                {/* <ProjectItem icon={blog} title="LetMeTalk" /> */}
+                {/* <ProjectItem icon={octopus} title="Octopus" /> */}
+                <ProjectItem
+                    icon={hanan}
+                    title="Hanan SAT Helper"
+                    href={"https://github.com/yahyafati/HananSATHelper"}
+                />
+                <ProjectItem
+                    icon={task}
+                    title="Task Tracker"
+                    href={"https://github.com/yahyafati/task_tracker_react"}
+                />
             </Carousel>
             {/* </div> */}
         </div>

@@ -81,8 +81,28 @@
   width: 15rem;
 }
 
-#projectSection .projectList .project-item .title {
+#projectSection .projectList .project-item .title-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.25rem;
+}
+
+#projectSection .projectList .project-item .title-container .title {
   font-weight: 400;
+  font-size: 1.5rem;
+}
+
+#projectSection .projectList .project-item .title-container .git-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-size: 1.5rem;
 }
 
