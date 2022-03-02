@@ -1,5 +1,11 @@
 import React from "react";
-import { FaFacebookF, FaLinkedinIn, FaPhone, FaTwitter } from "react-icons/fa";
+import {
+    FaFacebookF,
+    FaGithub,
+    FaLinkedinIn,
+    FaPhone,
+    FaTwitter,
+} from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { AiFillInstagram } from "react-icons/ai";
 import { Link } from "react-router-dom";
@@ -7,6 +13,9 @@ import { Link } from "react-router-dom";
 const SocialMediaIcons = () => {
     return (
         <div className="icons">
+            <a href={"https://github.com/yahyafati"}>
+                <FaGithub className="icon" />
+            </a>
             <a href={"https://www.twitter.com"}>
                 <FaTwitter className="icon" />
             </a>
