@@ -13,7 +13,7 @@ module.exports = {
         },
     },
     devServer: {
-        historyApiFallback: true
+        historyApiFallback: true,
     },
     module: {
         rules: [
@@ -47,16 +47,16 @@ module.exports = {
                 ],
             },
             {
-                test: /\.(pdf)$/,
+                test: /\.(pdf|docx)$/,
                 use: [
                     {
                         loader: "file-loader",
                         options: {
-                            name: '[name].[ext]'
-                        }
-                    }
-                ]
-            }
+                            name: "[name].[ext]",
+                        },
+                    },
+                ],
+            },
         ],
     },
     plugins: [

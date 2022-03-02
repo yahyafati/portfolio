@@ -1,8 +1,8 @@
 import React from "react";
 import "../../../style/home/home.css";
 import standingManSVG from "../../../svg/Home.svg";
-import downloadableFile from "../../../Resume.pdf"
-import {Link} from "react-router-dom";
+import downloadableFile from "../../../Resume.docx";
+import { Link } from "react-router-dom";
 
 const Home = () => {
     return (
@@ -12,8 +12,17 @@ const Home = () => {
                 <p className="name">Yahya Fati</p>
                 <p className="work">Freelance Web and Mobile Developer</p>
                 <div className="buttons">
-                    <Link to={"/contact"} className="button primary">Contact Me</Link>
-                    <a href={downloadableFile} target={"_blank"} download className="button">Download CV</a>
+                    <Link to={"/contact"} className="button primary">
+                        Contact Me
+                    </Link>
+                    <a
+                        href={downloadableFile}
+                        target={"_blank"}
+                        download
+                        className="button"
+                    >
+                        Download CV
+                    </a>
                 </div>
             </div>
             <img
