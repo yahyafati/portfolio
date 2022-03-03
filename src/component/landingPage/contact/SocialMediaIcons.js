@@ -16,9 +16,9 @@ const SocialMediaIcons = () => {
             <a href={"https://github.com/yahyafati"}>
                 <FaGithub className="icon" />
             </a>
-            <a href={"https://www.twitter.com"}>
+            {/* <a href={"https://www.twitter.com"}>
                 <FaTwitter className="icon" />
-            </a>
+            </a> */}
             <a href={"https://www.linkedin.com/in/yahya-haji"}>
                 <FaLinkedinIn className="icon" />
             </a>
