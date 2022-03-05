@@ -1,11 +1,10 @@
 import React from "react";
 import "../../../style/projects/project.css";
 import ProjectItem from "./ProjectItem";
-import blog from "../../../svg/Blog.svg";
 import helio from "../../../svg/HelioIMS.svg";
-import octopus from "../../../svg/Octopus.svg";
 import hanan from "../../../svg/Hanan.svg";
 import task from "../../../svg/Tasks.svg";
+import game2048 from "../../../svg/Game2048.svg";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
@@ -42,6 +41,12 @@ const Projects = () => {
                     icon={task}
                     title="Task Tracker"
                     href={"https://github.com/yahyafati/task_tracker_react"}
+                />
+                <ProjectItem
+                    icon={game2048}
+                    title="2048"
+                    href={"https://github.com/yahyafati/task_tracker_react"}
+                    link={"https://game.yahyafati.com/"}
                 />
             </Carousel>
             {/* </div> */}

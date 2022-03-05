@@ -1,7 +1,7 @@
 import React from "react";
-import { AiFillGithub } from "react-icons/ai";
+import { AiFillGithub, AiFillChrome } from "react-icons/ai";
 
-const ProjectItem = ({ icon, title, href }) => {
+const ProjectItem = ({ icon, title, href, link }) => {
     return (
         <div className="project-item-container">
             <div className="project-item">
@@ -15,6 +15,11 @@ const ProjectItem = ({ icon, title, href }) => {
                     <a className="git-icon" href={href}>
                         <AiFillGithub />
                     </a>
+                    {link && (
+                        <a className="git-icon" href={link}>
+                            <AiFillChrome />
+                        </a>
+                    )}
                 </div>
             </div>
         </div>
