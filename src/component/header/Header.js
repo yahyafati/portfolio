@@ -40,7 +40,7 @@ const Header = ({currentPage, setCurrentPage}) => {
                         className={currentPage === "services" ? "active" : ""}
                         onClick={(e) => linkClicked(e, "services")}
                     >
-                        <HashLink to={"/#servicesSection"}>Section</HashLink>
+                        <HashLink to={"/#servicesSection"}>Services</HashLink>
                     </li>
                     <li
                         className={currentPage === "projects" ? "active" : ""}
