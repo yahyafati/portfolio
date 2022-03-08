@@ -94,6 +94,10 @@ $font-weight-bold: 700;
                 .git-icon {
                     display: flex;
                     font-size: 1.5rem;
+
+                    &:hover {
+                        color: $primary-color;
+                    }
                 }
             }
 
