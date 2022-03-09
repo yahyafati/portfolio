@@ -23,6 +23,7 @@ const Projects = () => {
                 showStatus={false}
                 showArrows={false}
                 showIndicators={false}
+                showThumbs={false}
                 emulateTouch={true}
             >
                 <ProjectItem

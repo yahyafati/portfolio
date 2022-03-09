@@ -19,8 +19,8 @@ const Testimonial = () => {
                 showStatus={false}
                 showArrows={false}
                 showIndicators={false}
+                showThumbs={false}
                 emulateTouch={true}
-
             >
                 <div className="testimonial-container">
                     <MomTestimonialItem />

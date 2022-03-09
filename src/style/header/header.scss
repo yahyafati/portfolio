@@ -21,122 +21,202 @@ $navBarUlZIndex: 200;
 $introTextZIndex: 100;
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 3rem;
-  // background-color: blue;
-
-  @media screen and (max-width: 768px) {
-    padding: 2rem;
-  }
-
-  @media screen and (max-width: 320px) {
-    padding: 1rem 1rem;
-  }
-
-  .option-button {
-    @media screen and (min-width: 641px) {
-      display: none;
-    }
-
-    @media screen and (max-width: 641px) {
-      display: flex;
-    }
-  }
-
-  .logo-title {
-    h1 {
-      color: $primary-color;
-      font-family: $font-family-logo;
-      font-weight: $font-weight-regular;
-      font-size: 2rem;
-
-      @media screen and (max-width: 768px) {
-        font-size: 1.5rem;
-        font-weight: $font-weight-light;
-      }
-
-      @media screen and (max-width: 320px) {
-        font-size: 1.25rem;
-        font-weight: $font-weight-light;
-      }
-    }
-  }
-
-  .navbar-link-container {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
 
-    .option-button.hamburger {
-      align-self: center;
-      justify-self: flex-end;
+    .logo-title {
+        h1 {
+            color: $primary-color;
+            font-family: $font-family-logo;
+            font-weight: $font-weight-regular;
+            font-size: 2rem;
+        }
     }
 
-    ul {
-      display: flex;
-      align-items: center;
-      list-style-type: none;
-      gap: 1.5rem;
-
-      @media screen and (max-width: 768px) {
-        font-size: 0.9rem;
-        font-weight: $font-weight-light;
-      }
-
-      li {
-        cursor: pointer;
-        color: $inactive-navbar-link-color;
-        width: fit-content;
-
-        &.active {
-          color: $active-navbar-link-color;
-          font-weight: $font-weight-bold;
-        }
-
-        &:hover {
-          color: $secondary-color;
-        }
-
-        &.hire-me {
-          color: $primary-color;
-          border: 2px solid white;
-          padding: 0.25rem 1rem;
-          border-radius: 5rem;
-
-          &:hover {
-            background-color: $primary-color;
-            color: $background-color;
-            border-color: $primary-color;
-          }
-        }
-      }
-    }
-
-    @media screen and (max-width: 641px) {
-      padding: 1.5rem;
-      z-index: $navBarUlZIndex;
-      background-color: $background-color;
-      position: fixed;
-      top: 0;
-      left: 0;
-      flex-direction: column;
-      justify-content: space-around;
-      width: 100vw;
-      height: 100vh;
-
-      .option-button {
+    .navbar-link-container {
         display: flex;
-      }
-      ul {
-        justify-content: space-around;
         flex-direction: column;
-        height: 100%;
-      }
 
-      &.collapsed {
-        display: none;
-      }
+        .option-button.hamburger {
+            align-self: center;
+            justify-self: flex-end;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+            gap: 1.5rem;
+
+            li {
+                cursor: pointer;
+                color: $inactive-navbar-link-color;
+                width: fit-content;
+
+                &.active {
+                    color: $active-navbar-link-color;
+                    font-weight: $font-weight-bold;
+                }
+
+                &:hover {
+                    color: $secondary-color;
+                }
+
+                &.hire-me {
+                    color: $primary-color;
+                    border: 2px solid white;
+                    padding: 0.25rem 1rem;
+                    border-radius: 5rem;
+
+                    &:hover {
+                        background-color: $primary-color;
+                        color: $background-color;
+                        border-color: $primary-color;
+                    }
+                }
+            }
+        }
     }
-  }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        position: relative;
+        padding: 2rem;
+        .logo-title {
+            // &.menuOpen {
+            //     display: none;
+            // }
+            h1 {
+                font-size: 1.5rem;
+                font-weight: $font-weight-light;
+            }
+        }
+
+        // & > .option-button {
+        //     &.menuOpen {
+        //         display: none;
+        //     }
+        // }
+
+        .navbar-link-container {
+            ul {
+                font-size: 0.9rem;
+                font-weight: $font-weight-light;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+    header {
+        padding: 1rem;
+        .logo-title {
+            h1 {
+                font-size: 1.25rem;
+                font-weight: $font-weight-light;
+            }
+        }
+        .navbar-link-container {
+            ul {
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 641px) {
+    header {
+        .option-button {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 641px) {
+    header {
+        // position: relative;
+        .option-button {
+            display: flex;
+        }
+
+        & > .option-button.close {
+            flex-grow: 1;
+        }
+
+        .navbar-link-container {
+            position: relative;
+            z-index: $navBarUlZIndex;
+            background-color: $background-color;
+            flex-direction: column;
+            justify-content: space-around;
+
+            &.expanded {
+                .menu {
+                    animation: expand_animation 0.5s;
+                }
+            }
+
+            &.collapsed {
+                .menu {
+                    animation: collapse_animation 0.5s;
+                }
+            }
+
+            &.hidden {
+                display: none;
+            }
+
+            .menu {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                right: 0;
+                top: 1rem;
+                overflow: hidden;
+                border-radius: 0 0 20px 20px;
+
+                .option-button {
+                    align-self: flex-end;
+                }
+
+                ul {
+                    justify-content: space-around;
+                    background-color: #221f48e0;
+                    flex-direction: column;
+                    padding: 1rem;
+
+                    & > li {
+                        padding-left: 5rem;
+                        padding-right: 5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes expand_animation {
+    0% {
+        transform: translateY(100%);
+        border-radius: 0;
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+        border-radius: 0 0 20px 20px;
+    }
+}
+
+@keyframes collapse_animation {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
 }
