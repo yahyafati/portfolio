@@ -58,7 +58,7 @@ const Home = ({ _ref }) => {
                         download
                         className="button"
                     >
-                        Download CV
+                        Get Resume
                     </a>
                 </div>
             </div>
