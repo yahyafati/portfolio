@@ -23,111 +23,151 @@ $navBarUlZIndex: 200;
 $introTextZIndex: 100;
 
 #homeSection {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 1rem;
-
-  background: linear-gradient(
-                  180deg,
-                  $background-color 0%,
-                  $lighter-background-color 100%
-  );
-
-  .intro_text {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    z-index: $introTextZIndex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
 
-    .hi {
-      font-size: 2rem;
-    }
+    background: linear-gradient(
+        180deg,
+        $background-color 0%,
+        $lighter-background-color 100%
+    );
 
-    .name {
-      width: min-content;
-      color: $primary-color;
-      font-weight: $font-weight-bold;
-      font-size: 7rem;
-    }
+    .intro_text {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        z-index: $introTextZIndex;
 
-    .work {
-      font-weight: $font-weight-medium;
-      font-size: 1.5rem;
-    }
-
-    .buttons {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
-    @media screen and (max-width: 768px) {
-      .hi {
-        font-size: 1.5rem;
-      }
-
-      .name {
-        font-size: 5rem;
-      }
-
-      .work {
-        font-size: 1rem;
-        font-weight: $font-weight-light;
-      }
-    }
-
-    @media screen and (max-width: 640px) and (min-width: 321px) {
-      width: 180px;
-
-      .hi {
-        font-size: 1rem;
-      }
-
-      .name {
-        font-size: 3rem;
-      }
-
-      .work {
-        font-size: 0.8rem;
-      }
-
-      .buttons {
-        .button {
-          font-size: 0.6rem;
-          padding: 0.2rem 0.5rem;
+        .hi {
+            font-size: 2rem;
         }
-      }
-    }
 
-    @media screen and (max-width: 320px) {
-      .name {
-        font-size: 3.5rem;
-      }
-
-      .work {
-        font-weight: $font-weight-light;
-        font-size: 0.8rem;
-      }
-
-      .buttons {
-        .button {
-          font-size: 0.5rem;
-          padding: 0.25rem 0.5rem;
+        .name {
+            width: min-content;
+            color: $primary-color;
+            font-weight: $font-weight-bold;
+            font-size: 7rem;
         }
-      }
-    }
-  }
 
-  .introImg {
-    width: 50%;
+        .work {
+            position: relative;
 
-    @media screen and (max-width: 320px) {
-      display: none;
+            font-family: "Source Code Pro", monospace;
+            font-weight: $font-weight-medium;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            width: fit-content;
+
+            .before {
+                position: absolute;
+                background: linear-gradient(180deg, #292372 0%, #2a2375 100%);
+                right: 0;
+                top: 0%;
+                height: 100%;
+
+                &.animate {
+                    left: 0;
+                    animation: slide 2s ease 1s;
+                }
+
+                .after {
+                    position: absolute;
+                    left: 0;
+                    top: 10%;
+                    height: 80%;
+                    border-left: 5px solid $primary-color;
+                    animation: blink 500ms ease 1s infinite;
+                }
+            }
+        }
+
+        .buttons {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        @media screen and (max-width: 768px) {
+            .hi {
+                font-size: 1.5rem;
+            }
+
+            .name {
+                font-size: 5rem;
+            }
+
+            .work {
+                font-size: 1.2rem;
+                font-weight: $font-weight-light;
+            }
+        }
+
+        @media screen and (max-width: 640px) and (min-width: 481px) {
+            width: 180px;
+
+            .hi {
+                font-size: 1rem;
+            }
+
+            .name {
+                font-size: 3rem;
+            }
+
+            .work {
+                font-size: 1rem;
+            }
+
+            .buttons {
+                .button {
+                    font-size: 0.6rem;
+                    padding: 0.2rem 0.5rem;
+                }
+            }
+        }
+
+        @media screen and (max-width: 320px) {
+            .name {
+                font-size: 3.5rem;
+            }
+
+            .work {
+                font-weight: $font-weight-light;
+                font-size: 0.8rem;
+            }
+
+            .buttons {
+                .button {
+                    font-size: 0.5rem;
+                    padding: 0.25rem 0.5rem;
+                }
+            }
+        }
     }
 
-    @media screen and (max-width: 640px) and (min-width: 321px) {
-      width: 35%;
+    .introImg {
+        width: 50%;
+
+        @media screen and (max-width: 480px) {
+            display: none;
+        }
+
+        @media screen and (max-width: 640px) and (min-width: 321px) {
+            width: 35%;
+        }
     }
-  }
+}
+
+@keyframes blink {
+    to {
+        border-color: #00ff2900;
+    }
+}
+
+// Don't change animation name, need to change it in Home.js as well
+@keyframes slide {
+    to {
+        left: 100%;
+    }
 }

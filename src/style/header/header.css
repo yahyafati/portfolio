@@ -176,56 +176,52 @@ header .navbar-link-container ul li.hire-me:hover {
 
 @-webkit-keyframes expand_animation {
   0% {
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%);
-    border-radius: 0;
-    opacity: 0.8;
+    -webkit-transform: translateY(-50%) scaleY(0);
+            transform: translateY(-50%) scaleY(0);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateY(0) scaleY(1);
+            transform: translateY(0) scaleY(1);
     opacity: 1;
-    border-radius: 0 0 20px 20px;
   }
 }
 
 @keyframes expand_animation {
   0% {
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%);
-    border-radius: 0;
-    opacity: 0.8;
+    -webkit-transform: translateY(-50%) scaleY(0);
+            transform: translateY(-50%) scaleY(0);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateY(0) scaleY(1);
+            transform: translateY(0) scaleY(1);
     opacity: 1;
-    border-radius: 0 0 20px 20px;
   }
 }
 
 @-webkit-keyframes collapse_animation {
   0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateY(0) scaleY(1);
+            transform: translateY(0) scaleY(1);
     opacity: 1;
   }
   100% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    -webkit-transform: translateY(-50%) scaleY(0);
+            transform: translateY(-50%) scaleY(0);
     opacity: 0;
   }
 }
 
 @keyframes collapse_animation {
   0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-transform: translateY(0) scaleY(1);
+            transform: translateY(0) scaleY(1);
     opacity: 1;
   }
   100% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    -webkit-transform: translateY(-50%) scaleY(0);
+            transform: translateY(-50%) scaleY(0);
     opacity: 0;
   }
 }
