@@ -81,11 +81,12 @@ header .navbar-link-container ul li {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 header .navbar-link-container ul li.active {
   color: #bdff00;
-  font-weight: 700;
 }
 
 header .navbar-link-container ul li:hover {

@@ -2,11 +2,11 @@ import React from "react";
 import "../../../style/contact/contact.css";
 import SocialMediaIcons from "./SocialMediaIcons";
 
-const Contact = () => {
+const Contact = ({ _ref }) => {
     return (
-        <footer id="contactSection">
+        <footer ref={_ref} id="contactSection">
             <h2 className="name">Yahya Fati Haji</h2>
-            <SocialMediaIcons/>
+            <SocialMediaIcons />
             <h6 className="credit">Designed and Developed By Me</h6>
         </footer>
     );

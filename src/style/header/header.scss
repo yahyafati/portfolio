@@ -74,10 +74,10 @@ header {
                 cursor: pointer;
                 color: $inactive-navbar-link-color;
                 width: fit-content;
+                transition: all 0.5s;
 
                 &.active {
                     color: $active-navbar-link-color;
-                    font-weight: $font-weight-bold;
                 }
 
                 &:hover {

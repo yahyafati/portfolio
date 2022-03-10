@@ -16,23 +16,15 @@ const App = () => {
                     setCurrentPage={setCurrentPage}
                 />
                 <Switch>
+                    <Route path={"/contact"} component={ContactPage} />
                     <Route
-                        path={"/contact"}
-                        render={(props) => {
-                            setCurrentPage("contact");
-                            return <ContactPage {...props} />;
-                        }}
-                    />
-                    <Route
-                        path={"/"}
-                        render={(props) => {
-                            return (
-                                <LandingPage
-                                    {...props}
-                                    currentPage={currentPage}
-                                />
-                            );
-                        }}
+                        path="/"
+                        children={
+                            <LandingPage
+                                currentPage={currentPage}
+                                setCurrentPage={setCurrentPage}
+                            />
+                        }
                         exact
                     />
                 </Switch>

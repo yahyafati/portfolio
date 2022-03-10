@@ -5,9 +5,9 @@ import { DadTestimonialItem, MomTestimonialItem } from "./TestimonialItem";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 
-const Testimonial = () => {
+const Testimonial = ({ _ref }) => {
     return (
-        <div id="testimonialSection">
+        <div ref={_ref} id="testimonialSection">
             <h2>
                 <strong>Kinds words</strong> I've received over the years
             </h2>

@@ -4,10 +4,9 @@ import hereAreServices from "../../../svg/Services.svg";
 import "../../../style/service/service.css";
 import ServiceCard from "./ServiceCard";
 
-const Services = () => {
-
+const Services = ({ _ref }) => {
     return (
-        <div id="servicesSection">
+        <div ref={_ref} id="servicesSection">
             <h2>
                 Here are the <strong>Services</strong> that I offer
             </h2>

@@ -5,7 +5,7 @@ import downloadableFile from "../../../Resume.docx";
 import { Link } from "react-router-dom";
 
 const MY_TITLE = ["Web Developer", "Mobile Developer", "Student"];
-const Home = () => {
+const Home = ({ _ref }) => {
     const [currentWordIndex, setCurrentWordIndex] = useState(0);
     const [animateTyping, setAnimateTyping] = useState(true);
 
@@ -25,7 +25,7 @@ const Home = () => {
     };
 
     return (
-        <div id="homeSection">
+        <div ref={_ref} id="homeSection">
             <div className="intro_text">
                 <p className="hi">Hi, I'm</p>
                 <p className="name">Yahya Fati</p>

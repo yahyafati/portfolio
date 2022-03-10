@@ -1,10 +1,10 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import hiFromDev from "../../../svg/About.svg";
 import "../../../style/about/about.css";
 
-const About = () => {
+const About = ({ _ref }) => {
     return (
-        <div id="aboutSection">
+        <div ref={_ref} id="aboutSection">
             <div className="imgContainer">
                 <img
                     className="aboutImg"

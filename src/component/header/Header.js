@@ -6,18 +6,13 @@ import { HashLink } from "react-router-hash-link";
 import OutsideClickHandler from "react-outside-click-handler/build/OutsideClickHandler";
 
 const Header = ({ currentPage, setCurrentPage }) => {
-    const [hidden, setHidden] = useState(expanded);
     const [expanded, setExpanded] = useState(false); // Is Menu Expanded?
+    const [hidden, setHidden] = useState(true);
     const [goingUp, setGoingUP] = useState(false);
 
     const prevScrollY = useRef(0);
     const [scrollY, setScrollY] = useState(window.scrollY);
 
-    // useEffect(() => {
-    //     if (!goingUp && scrollY > 0) {
-    //         console.log("Here");
-    //     }
-    // }, [scrollY, goingUp]);
     useEffect(() => {
         if (expanded) setHidden(false);
     }, [expanded]);
@@ -33,7 +28,6 @@ const Header = ({ currentPage, setCurrentPage }) => {
             setGoingUP(false);
         } else if (currentScrollY < prevScrollY.current) {
             setGoingUP(true);
-            // Scrolling Up
         }
         prevScrollY.current = currentScrollY;
         setScrollY(prevScrollY.current);
@@ -45,7 +39,9 @@ const Header = ({ currentPage, setCurrentPage }) => {
     }, []);
 
     const linkClicked = (e, value) => {
-        e.preventDefault();
+        // e.preventDefault();
+        setExpanded(false);
+        setGoingUP(false);
         setCurrentPage(value);
     };
 
@@ -86,10 +82,9 @@ const Header = ({ currentPage, setCurrentPage }) => {
                                 className={
                                     currentPage === "home" ? "active" : ""
                                 }
-                                onClick={(e) => linkClicked(e, "home")}
                             >
                                 <HashLink
-                                    onClick={() => setExpanded(false)}
+                                    onClick={(e) => linkClicked(e, "home")}
                                     to={"/#homeSection"}
                                 >
                                     Home
@@ -99,10 +94,9 @@ const Header = ({ currentPage, setCurrentPage }) => {
                                 className={
                                     currentPage === "services" ? "active" : ""
                                 }
-                                onClick={(e) => linkClicked(e, "services")}
                             >
                                 <HashLink
-                                    onClick={() => setExpanded(false)}
+                                    onClick={(e) => linkClicked(e, "services")}
                                     to={"/#servicesSection"}
                                 >
                                     Services
@@ -112,10 +106,9 @@ const Header = ({ currentPage, setCurrentPage }) => {
                                 className={
                                     currentPage === "projects" ? "active" : ""
                                 }
-                                onClick={(e) => linkClicked(e, "projects")}
                             >
                                 <HashLink
-                                    onClick={() => setExpanded(false)}
+                                    onClick={(e) => linkClicked(e, "projects")}
                                     to="/#projectSection"
                                 >
                                     Works
@@ -123,19 +116,33 @@ const Header = ({ currentPage, setCurrentPage }) => {
                             </li>
                             <li
                                 className={
+                                    currentPage === "testimonials"
+                                        ? "active"
+                                        : ""
+                                }
+                            >
+                                <HashLink
+                                    onClick={(e) => linkClicked(e, "projects")}
+                                    to="/#testimonialSection"
+                                >
+                                    Testimonials
+                                </HashLink>
+                            </li>
+                            {/* <li
+                                className={
                                     currentPage === "contact" ? "active" : ""
                                 }
                             >
                                 <Link
-                                    onClick={() => setExpanded(false)}
+                                    onClick={(e) => linkClicked(e, "contact")}
                                     to={"/contact"}
                                 >
                                     Contact
                                 </Link>
-                            </li>
+                            </li> */}
                             <li className="hire-me" onClick={linkClicked}>
                                 <Link
-                                    onClick={() => setExpanded(false)}
+                                    onClick={(e) => linkClicked(e, "contact")}
                                     to={"/contact"}
                                 >
                                     Hire Me
