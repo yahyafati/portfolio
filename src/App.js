@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import "./style/app/App.css";
 import LandingPage from "./component/landingPage/LandingPage";
@@ -10,29 +10,33 @@ const App = () => {
 
     return (
         <BrowserRouter>
-            <Header
-                currentPage={currentPage}
-                setCurrentPage={setCurrentPage}
-                
-            />
-            <Switch>
-                <Route
-                    path={"/contact"}
-                    render={(props) => {
-                        setCurrentPage("contact");
-                        return <ContactPage {...props} />;
-                    }}
+            <div onScroll={(e) => handleScroll(e)}>
+                <Header
+                    currentPage={currentPage}
+                    setCurrentPage={setCurrentPage}
                 />
-                <Route
-                    path={"/"}
-                    render={(props) => {
-                        return (
-                            <LandingPage {...props} currentPage={currentPage} />
-                        );
-                    }}
-                    exact
-                />
-            </Switch>
+                <Switch>
+                    <Route
+                        path={"/contact"}
+                        render={(props) => {
+                            setCurrentPage("contact");
+                            return <ContactPage {...props} />;
+                        }}
+                    />
+                    <Route
+                        path={"/"}
+                        render={(props) => {
+                            return (
+                                <LandingPage
+                                    {...props}
+                                    currentPage={currentPage}
+                                />
+                            );
+                        }}
+                        exact
+                    />
+                </Switch>
+            </div>
         </BrowserRouter>
     );
 };

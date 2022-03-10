@@ -9,6 +9,35 @@ header {
       -ms-flex-align: center;
           align-items: center;
   padding: 3rem;
+  -webkit-transition: padding 0.5s;
+  transition: padding 0.5s;
+}
+
+header.stick {
+  width: calc(100% - 4rem);
+  padding: 1rem 2rem;
+  background-color: #221f48;
+  position: fixed;
+  height: auto;
+  z-index: 1000;
+}
+
+header.stick.show {
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+header.stick.hide {
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
 }
 
 header .logo-title h1 {
@@ -81,6 +110,10 @@ header .navbar-link-container ul li.hire-me:hover {
     position: relative;
     padding: 2rem;
   }
+  header.stick {
+    width: calc(100% - 4rem);
+    padding: 1rem 2rem;
+  }
   header .logo-title h1 {
     font-size: 1.5rem;
     font-weight: 300;
@@ -93,6 +126,10 @@ header .navbar-link-container ul li.hire-me:hover {
 
 @media screen and (max-width: 320px) {
   header {
+    padding: 1rem;
+  }
+  header.stick {
+    width: calc(100% - 2rem);
     padding: 1rem;
   }
   header .logo-title h1 {

@@ -25,6 +25,26 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 3rem;
+    transition: padding 0.5s;
+
+    &.stick {
+        width: calc(100% - 4rem);
+        padding: 1rem 2rem;
+        background-color: #221f48;
+        position: fixed;
+        height: auto;
+        z-index: 1000;
+
+        &.show {
+            transition: transform 0.5s;
+            transform: translateY(0%);
+        }
+
+        &.hide {
+            transition: transform 0.5s;
+            transform: translateY(-100%);
+        }
+    }
 
     .logo-title {
         h1 {
@@ -85,6 +105,11 @@ header {
     header {
         position: relative;
         padding: 2rem;
+
+        &.stick {
+            width: calc(100% - 4rem);
+            padding: 1rem 2rem;
+        }
         .logo-title {
             // &.menuOpen {
             //     display: none;
@@ -113,6 +138,11 @@ header {
 @media screen and (max-width: 320px) {
     header {
         padding: 1rem;
+
+        &.stick {
+            width: calc(100% - 2rem);
+            padding: 1rem;
+        }
         .logo-title {
             h1 {
                 font-size: 1.25rem;

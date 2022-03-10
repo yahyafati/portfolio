@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../../style/header/header.css";
 import Hamburger from "../Hamburger";
 import { Link } from "react-router-dom";
@@ -8,7 +8,16 @@ import OutsideClickHandler from "react-outside-click-handler/build/OutsideClickH
 const Header = ({ currentPage, setCurrentPage }) => {
     const [hidden, setHidden] = useState(expanded);
     const [expanded, setExpanded] = useState(false); // Is Menu Expanded?
+    const [goingUp, setGoingUP] = useState(false);
 
+    const prevScrollY = useRef(0);
+    const [scrollY, setScrollY] = useState(window.scrollY);
+
+    // useEffect(() => {
+    //     if (!goingUp && scrollY > 0) {
+    //         console.log("Here");
+    //     }
+    // }, [scrollY, goingUp]);
     useEffect(() => {
         if (expanded) setHidden(false);
     }, [expanded]);
@@ -16,6 +25,24 @@ const Header = ({ currentPage, setCurrentPage }) => {
     const toggleShow = () => {
         setExpanded((current) => !current);
     };
+
+    const handleScroll = (e) => {
+        const currentScrollY = window.scrollY;
+        setExpanded(false);
+        if (currentScrollY > prevScrollY.current) {
+            setGoingUP(false);
+        } else if (currentScrollY < prevScrollY.current) {
+            setGoingUP(true);
+            // Scrolling Up
+        }
+        prevScrollY.current = currentScrollY;
+        setScrollY(prevScrollY.current);
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     const linkClicked = (e, value) => {
         e.preventDefault();
@@ -32,7 +59,11 @@ const Header = ({ currentPage, setCurrentPage }) => {
     };
 
     return (
-        <header>
+        <header
+            className={`${scrollY > 0 ? "stick" : " "} ${
+                scrollY > 0 && goingUp ? "show" : "hide"
+            }`}
+        >
             <Link to={"/"} className={`logo-title ${expanded && "menuOpen"}`}>
                 <h1>Yahya Fati</h1>
             </Link>
@@ -50,11 +81,6 @@ const Header = ({ currentPage, setCurrentPage }) => {
                     } navbar-link-container`}
                 >
                     <div className="menu" onAnimationEnd={handleAnimationEnd}>
-                        {/* <Hamburger
-                        className={`option-button - ${expanded && "close"}`}
-                        onClick={toggleShow}
-                    /> */}
-
                         <ul>
                             <li
                                 className={
