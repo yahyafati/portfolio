@@ -5,38 +5,29 @@ import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import OutsideClickHandler from "react-outside-click-handler/build/OutsideClickHandler";
 
-const Header = ({ currentPage, setCurrentPage }) => {
+const Header = ({
+    currentPage,
+    setCurrentPage,
+    goingUp,
+    setGoingUP,
+    scrollY,
+    sticky = false,
+}) => {
     const [expanded, setExpanded] = useState(false); // Is Menu Expanded?
     const [hidden, setHidden] = useState(true);
-    const [goingUp, setGoingUP] = useState(false);
 
-    const prevScrollY = useRef(0);
-    const [scrollY, setScrollY] = useState(window.scrollY);
+    useEffect(() => {
+        setExpanded(false);
+    }, [scrollY]);
 
     useEffect(() => {
         if (expanded) setHidden(false);
     }, [expanded]);
 
+    // console.log("Sticky: ", sticky);
     const toggleShow = () => {
         setExpanded((current) => !current);
     };
-
-    const handleScroll = (e) => {
-        const currentScrollY = window.scrollY;
-        setExpanded(false);
-        if (currentScrollY > prevScrollY.current) {
-            setGoingUP(false);
-        } else if (currentScrollY < prevScrollY.current) {
-            setGoingUP(true);
-        }
-        prevScrollY.current = currentScrollY;
-        setScrollY(prevScrollY.current);
-    };
-
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
 
     const linkClicked = (e, value) => {
         // e.preventDefault();
@@ -54,12 +45,36 @@ const Header = ({ currentPage, setCurrentPage }) => {
         }
     };
 
+    const getClassName = () => {
+        const minScroll = 120;
+        if (!sticky) {
+            // return scrollY > 0 ? " no-display " : " ";
+            // return scrollY > minScroll ? "no-display" : "no-display hide";
+            return "";
+        }
+        if (scrollY <= minScroll) {
+            return "stick";
+        }
+        let result = "stick";
+        if (goingUp && scrollY > minScroll) {
+            // if (scrollY > minScroll) {
+            result += " show ";
+            // } else {
+            // result += " hide ";
+            // }
+        } else {
+            result += " hide ";
+        }
+        // result +=
+        //     goingUp && scrollY > 0
+        //         ? // scrollY > originalRef.current.getBoundingClientRect().height
+        //           " show "
+        //         : " hide ";
+        return result;
+    };
+
     return (
-        <header
-            className={`${scrollY > 0 ? "stick" : " "} ${
-                scrollY > 0 && goingUp ? "show" : "hide"
-            }`}
-        >
+        <header className={getClassName()}>
             <Link to={"/"} className={`logo-title ${expanded && "menuOpen"}`}>
                 <h1>Yahya Fati</h1>
             </Link>
@@ -128,18 +143,7 @@ const Header = ({ currentPage, setCurrentPage }) => {
                                     Testimonials
                                 </HashLink>
                             </li>
-                            {/* <li
-                                className={
-                                    currentPage === "contact" ? "active" : ""
-                                }
-                            >
-                                <Link
-                                    onClick={(e) => linkClicked(e, "contact")}
-                                    to={"/contact"}
-                                >
-                                    Contact
-                                </Link>
-                            </li> */}
+
                             <li className="hire-me" onClick={linkClicked}>
                                 <Link
                                     onClick={(e) => linkClicked(e, "contact")}
@@ -152,8 +156,6 @@ const Header = ({ currentPage, setCurrentPage }) => {
                     </div>
                 </div>
             </OutsideClickHandler>
-
-            {/* <GoThreeBars className="option-button" onClick={toggleShow} /> */}
         </header>
     );
 };

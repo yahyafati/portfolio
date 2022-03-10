@@ -55,7 +55,6 @@ const Home = ({ _ref }) => {
                     <a
                         href={downloadableFile}
                         target={"_blank"}
-                        download
                         className="button"
                     >
                         Get Resume

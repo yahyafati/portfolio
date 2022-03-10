@@ -15,27 +15,34 @@ header {
 
 header.stick {
   width: calc(100% - 4rem);
-  padding: 1rem 2rem;
+  padding: 2rem;
   background-color: #221f48;
   position: fixed;
+  top: 0;
   height: auto;
   z-index: 1000;
 }
 
 header.stick.show {
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.8s;
+  transition: opacity 0.5s, -webkit-transform 0.8s;
+  transition: transform 0.8s, opacity 0.5s;
+  transition: transform 0.8s, opacity 0.5s, -webkit-transform 0.8s;
+  opacity: 1;
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
 }
 
+header.stick.total-hide {
+  display: none;
+}
+
 header.stick.hide {
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transition: opacity 0.5s, -webkit-transform 0.8s;
+  transition: opacity 0.5s, -webkit-transform 0.8s;
+  transition: transform 0.8s, opacity 0.5s;
+  transition: transform 0.8s, opacity 0.5s, -webkit-transform 0.8s;
+  opacity: 0;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
 }
@@ -113,7 +120,6 @@ header .navbar-link-container ul li.hire-me:hover {
   }
   header.stick {
     width: calc(100% - 4rem);
-    padding: 1rem 2rem;
   }
   header .logo-title h1 {
     font-size: 1.5rem;
@@ -131,7 +137,6 @@ header .navbar-link-container ul li.hire-me:hover {
   }
   header.stick {
     width: calc(100% - 2rem);
-    padding: 1rem;
   }
   header .logo-title h1 {
     font-size: 1.25rem;

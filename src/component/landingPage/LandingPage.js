@@ -7,8 +7,8 @@ import Testimonial from "./testimonial/Testimonial";
 import ShallWe from "./shallWe/ShallWe";
 import Contact from "./contact/Contact";
 
-const LandingPage = ({ currentPage, setCurrentPage }) => {
-    const [scrollY, setScrollY] = useState(window.scrollY);
+const LandingPage = ({ setCurrentPage, scrollY }) => {
+    // const [scrollY, setScrollY] = useState(window.scrollY);
     const homeRef = useRef(undefined);
     const aboutRef = useRef(undefined);
     const servicesRef = useRef(undefined);
@@ -34,16 +34,6 @@ const LandingPage = ({ currentPage, setCurrentPage }) => {
             setCurrentPage("reach-me");
         }
     }, [scrollY]);
-
-    const handleScroll = (e) => {
-        setScrollY(window.scrollY);
-        // e.preventDefault();
-    };
-
-    useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
 
     return (
         <div id="AppContainer">
