@@ -16,7 +16,6 @@ const Home = () => {
     const handleAnimationEnd = (e) => {
         if (e.animationName === "slide") {
             setAnimateTyping(false);
-            console.log(e.target.classList);
             setTimeout(() => {
                 setCurrentWordIndex(
                     (current) => (current + 1) % MY_TITLE.length

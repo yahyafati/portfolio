@@ -3,10 +3,11 @@ import "../../style/header/header.css";
 import Hamburger from "../Hamburger";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
+import OutsideClickHandler from "react-outside-click-handler/build/OutsideClickHandler";
 
 const Header = ({ currentPage, setCurrentPage }) => {
-    const [expanded, setExpanded] = useState(false);
     const [hidden, setHidden] = useState(expanded);
+    const [expanded, setExpanded] = useState(false); // Is Menu Expanded?
 
     useEffect(() => {
         if (expanded) setHidden(false);
@@ -35,85 +36,89 @@ const Header = ({ currentPage, setCurrentPage }) => {
             <Link to={"/"} className={`logo-title ${expanded && "menuOpen"}`}>
                 <h1>Yahya Fati</h1>
             </Link>
-            <Hamburger
-                className={`option-button`}
-                onClick={toggleShow}
-                menuVisible={!hidden}
-                expanded={expanded}
-            />
-            <div
-                className={`${
-                    (expanded ? "expanded" : "collapsed") +
-                    (hidden ? " hidden" : "")
-                } navbar-link-container`}
-            >
-                <div className="menu" onAnimationEnd={handleAnimationEnd}>
-                    {/* <Hamburger
+            <OutsideClickHandler onOutsideClick={() => setExpanded(false)}>
+                <Hamburger
+                    className={`option-button`}
+                    onClick={toggleShow}
+                    menuVisible={!hidden}
+                    expanded={expanded}
+                />
+                <div
+                    className={`${
+                        (expanded ? "expanded" : "collapsed") +
+                        (hidden ? " hidden" : "")
+                    } navbar-link-container`}
+                >
+                    <div className="menu" onAnimationEnd={handleAnimationEnd}>
+                        {/* <Hamburger
                         className={`option-button - ${expanded && "close"}`}
                         onClick={toggleShow}
                     /> */}
 
-                    <ul>
-                        <li
-                            className={currentPage === "home" ? "active" : ""}
-                            onClick={(e) => linkClicked(e, "home")}
-                        >
-                            <HashLink
-                                onClick={() => setExpanded(false)}
-                                to={"/#homeSection"}
+                        <ul>
+                            <li
+                                className={
+                                    currentPage === "home" ? "active" : ""
+                                }
+                                onClick={(e) => linkClicked(e, "home")}
                             >
-                                Home
-                            </HashLink>
-                        </li>
-                        <li
-                            className={
-                                currentPage === "services" ? "active" : ""
-                            }
-                            onClick={(e) => linkClicked(e, "services")}
-                        >
-                            <HashLink
-                                onClick={() => setExpanded(false)}
-                                to={"/#servicesSection"}
+                                <HashLink
+                                    onClick={() => setExpanded(false)}
+                                    to={"/#homeSection"}
+                                >
+                                    Home
+                                </HashLink>
+                            </li>
+                            <li
+                                className={
+                                    currentPage === "services" ? "active" : ""
+                                }
+                                onClick={(e) => linkClicked(e, "services")}
                             >
-                                Services
-                            </HashLink>
-                        </li>
-                        <li
-                            className={
-                                currentPage === "projects" ? "active" : ""
-                            }
-                            onClick={(e) => linkClicked(e, "projects")}
-                        >
-                            <HashLink
-                                onClick={() => setExpanded(false)}
-                                to="/#projectSection"
+                                <HashLink
+                                    onClick={() => setExpanded(false)}
+                                    to={"/#servicesSection"}
+                                >
+                                    Services
+                                </HashLink>
+                            </li>
+                            <li
+                                className={
+                                    currentPage === "projects" ? "active" : ""
+                                }
+                                onClick={(e) => linkClicked(e, "projects")}
                             >
-                                Works
-                            </HashLink>
-                        </li>
-                        <li
-                            className={
-                                currentPage === "contact" ? "active" : ""
-                            }
-                        >
-                            <Link
-                                onClick={() => setExpanded(false)}
-                                to={"/contact"}
+                                <HashLink
+                                    onClick={() => setExpanded(false)}
+                                    to="/#projectSection"
+                                >
+                                    Works
+                                </HashLink>
+                            </li>
+                            <li
+                                className={
+                                    currentPage === "contact" ? "active" : ""
+                                }
                             >
-                                Contact
-                            </Link>
-                        </li>
-                        <li className="hire-me" onClick={linkClicked}>
-                            <Link
-                                onClick={() => setExpanded(false)}
-                                to={"/contact"}
-                            >
-                                Hire Me
-                            </Link>
-                        </li>
-                    </ul>
+                                <Link
+                                    onClick={() => setExpanded(false)}
+                                    to={"/contact"}
+                                >
+                                    Contact
+                                </Link>
+                            </li>
+                            <li className="hire-me" onClick={linkClicked}>
+                                <Link
+                                    onClick={() => setExpanded(false)}
+                                    to={"/contact"}
+                                >
+                                    Hire Me
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
+            </OutsideClickHandler>
 
             {/* <GoThreeBars className="option-button" onClick={toggleShow} /> */}
         </header>
