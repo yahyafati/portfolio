@@ -28,8 +28,8 @@ const LandingPage = ({ setCurrentPage, scrollY }) => {
             setCurrentPage("services");
         } else if (projectsRef.current.getBoundingClientRect().top > 0) {
             setCurrentPage("projects");
-        } else if (testimonialRef.current.getBoundingClientRect().top > 0) {
-            setCurrentPage("testimonials");
+        // } else if (testimonialRef.current.getBoundingClientRect().top > 0) {
+        //     setCurrentPage("testimonials");
         } else {
             setCurrentPage("reach-me");
         }
@@ -41,7 +41,7 @@ const LandingPage = ({ setCurrentPage, scrollY }) => {
             <About _ref={aboutRef} />
             <Services _ref={servicesRef} />
             <Projects _ref={projectsRef} />
-            <Testimonial _ref={testimonialRef} />
+            {/* <Testimonial _ref={testimonialRef} /> */}
             <ShallWe />
             <Contact _ref={contactRef} />
         </div>

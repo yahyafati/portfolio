@@ -129,7 +129,7 @@ const Header = ({
                                     Works
                                 </HashLink>
                             </li>
-                            <li
+                            {/* <li
                                 className={
                                     currentPage === "testimonials"
                                         ? "active"
@@ -142,7 +142,7 @@ const Header = ({
                                 >
                                     Testimonials
                                 </HashLink>
-                            </li>
+                            </li> */}
 
                             <li className="hire-me" onClick={linkClicked}>
                                 <Link
