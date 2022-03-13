@@ -3,9 +3,9 @@ import Home from "./home/Home";
 import About from "./about/About";
 import Services from "./service/Services";
 import Projects from "./project/Projects";
-import Testimonial from "./testimonial/Testimonial";
 import ShallWe from "./shallWe/ShallWe";
 import Contact from "./contact/Contact";
+// import Testimonial from "./testimonial/Testimonial";
 
 const LandingPage = ({ setCurrentPage, scrollY }) => {
     // const [scrollY, setScrollY] = useState(window.scrollY);
@@ -13,7 +13,7 @@ const LandingPage = ({ setCurrentPage, scrollY }) => {
     const aboutRef = useRef(undefined);
     const servicesRef = useRef(undefined);
     const projectsRef = useRef(undefined);
-    const testimonialRef = useRef(undefined);
+    // const testimonialRef = useRef(undefined);
     const contactRef = useRef(undefined);
 
     useEffect(() => {
@@ -28,8 +28,8 @@ const LandingPage = ({ setCurrentPage, scrollY }) => {
             setCurrentPage("services");
         } else if (projectsRef.current.getBoundingClientRect().top > 0) {
             setCurrentPage("projects");
-        // } else if (testimonialRef.current.getBoundingClientRect().top > 0) {
-        //     setCurrentPage("testimonials");
+            // } else if (testimonialRef.current.getBoundingClientRect().top > 0) {
+            //     setCurrentPage("testimonials");
         } else {
             setCurrentPage("reach-me");
         }
